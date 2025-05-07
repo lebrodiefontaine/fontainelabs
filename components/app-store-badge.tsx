@@ -1,0 +1,27 @@
+"use client"
+
+import Link from "next/link"
+
+interface AppStoreBadgeProps {
+  href: string
+  className?: string
+}
+
+export function AppStoreBadge({ href, className = "" }: AppStoreBadgeProps) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-block ${className} transition-transform hover:scale-105`}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="h-[40px] bg-black text-white rounded-md px-4 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+        <div className="flex flex-col">
+          <span className="text-[8px]">Download on the</span>
+          <span className="text-[16px] font-semibold">App Store</span>
+        </div>
+      </div>
+    </Link>
+  )
+}

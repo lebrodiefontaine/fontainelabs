@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fontaine Labs LLC Website
 
-## Getting Started
+## App Icons
 
-First, run the development server:
+Both the UniChance and Aura Pro app icons have been added to the project with iOS-style rounded corners.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+If you need to replace either icon:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Simply replace the corresponding file in the `public/app-icons` directory:
+   - `public/app-icons/aura-pro-icon.png`
+   - `public/app-icons/uni-chance-icon.png`
+2. Make sure your new icons are square and at least 256x256 pixels for best quality
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## App Store and Google Play Badges
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The website includes App Store badges for both apps and a Google Play badge for UniChance. The badges link to:
 
-## Learn More
+- Aura Pro App Store: https://apps.apple.com/us/app/aura-pro-elite-aura-analysis/id6743044971
+- UniChance App Store: https://apps.apple.com/us/app/unichance-admissions-analysis/id6743754137
+- UniChance Google Play: Placeholder link (update when available)
 
-To learn more about Next.js, take a look at the following resources:
+To update the Google Play link when it becomes available:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Open `app/page.tsx`
+2. Find the `uniChance` object near the top of the file
+3. Replace the `googlePlay` value with the actual Google Play URL

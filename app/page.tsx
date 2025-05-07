@@ -1,122 +1,290 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Beaker, FlaskRoundIcon as Flask, Microscope, Mail } from "lucide-react"
+import { ArrowRight, Shield, MessageSquare, ChevronRight } from "lucide-react"
+import { AppIcon } from "@/components/app-icon"
+import { StoreBadge } from "@/components/store-badge"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
 export default function Home() {
+  // Aura Pro App Store URL
+  const auraPro = {
+    appStore: "https://apps.apple.com/us/app/aura-pro-elite-aura-analysis/id6743044971",
+  }
+
+  // UniChance App Store and Google Play URLs
+  const uniChance = {
+    appStore: "https://apps.apple.com/us/app/unichance-admissions-analysis/id6743754137",
+    googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
+  }
+
+  // Link App Store and Google Play URLs (placeholders)
+  const linkApp = {
+    appStore: "#", // Placeholder - replace with actual App Store URL when available
+    googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <Beaker className="h-6 w-6 mr-2" />
-          <span className="font-bold">Fontaine Labs LLC</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
-            Features
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
-            About
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <SiteHeader />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Welcome to Fontaine Labs LLC
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-racing-green-400 to-racing-green-200">
+                  Innovative Mobile Apps for Modern Life
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Innovating for a better tomorrow. We specialize in cutting-edge research and development.
+                <p className="mx-auto max-w-[700px] text-racing-green-200 md:text-xl animate-fade-in">
+                  At Fontaine Labs, we create beautiful, intuitive mobile applications that enhance your daily
+                  experience.
                 </p>
               </div>
               <div className="space-x-4">
-                <Button>Learn More</Button>
-                <Button variant="outline">Contact Us</Button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-              Our Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center">
-                <Flask className="h-12 w-12 mb-4 text-blue-600" />
-                <h3 className="text-xl font-bold mb-2">Chemical Analysis</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  State-of-the-art chemical analysis for various industries.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Microscope className="h-12 w-12 mb-4 text-blue-600" />
-                <h3 className="text-xl font-bold mb-2">Microbiology Research</h3>
-                <p className="text-gray-500 dark:text-gray-400">Advanced microbiology studies and research services.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Beaker className="h-12 w-12 mb-4 text-blue-600" />
-                <h3 className="text-xl font-bold mb-2">Product Development</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Innovative product development and testing solutions.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-              About Fontaine Labs
-            </h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 text-center mb-8">
-              Fontaine Labs LLC is a leading research and development company dedicated to pushing the boundaries of
-              science and technology. With a team of expert scientists and state-of-the-art facilities, we strive to
-              deliver innovative solutions to complex problems.
-            </p>
-            <div className="flex justify-center">
-              <Button>Learn More About Us</Button>
-            </div>
-          </div>
-        </section>
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">Contact Us</h2>
-            <div className="mx-auto max-w-[500px]">
-              <div className="space-y-4">
-                <Input placeholder="Your Name" />
-                <Input type="email" placeholder="Your Email" />
-                <Input placeholder="Subject" />
-                <textarea
-                  className="w-full h-32 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none resize-none"
-                  placeholder="Your Message"
-                ></textarea>
-                <Button className="w-full">
-                  <Mail className="mr-2 h-4 w-4" /> Send Message
+                <Button className="bg-primary hover:bg-racing-green-500 transition-colors">
+                  <Link href="#apps">
+                    Explore Our Apps <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             </div>
           </div>
         </section>
+
+        <section id="apps" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">Our Apps</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Aura Pro Card */}
+              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
+                {/* Make the entire card clickable with an overlay link */}
+                <Link href="/aura-pro" className="absolute inset-0 z-10">
+                  <span className="sr-only">View Aura Pro details</span>
+                </Link>
+
+                <div className="h-48 bg-black flex items-center justify-center p-6">
+                  <div className="flex flex-col items-center">
+                    <AppIcon app="aura-pro" size="lg" className="mb-4" />
+                    <h3 className="text-3xl font-bold text-white">Aura Pro</h3>
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-card-foreground mb-4">
+                    Discover your unique aura signature with our advanced facial analysis technology. Reveal insights
+                    about your energy and spiritual alignment.
+                  </p>
+                  <div className="mt-auto space-y-3">
+                    <Link
+                      href="/support-aura-pro"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <MessageSquare className="h-4 w-4 mr-2" /> Support
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="/privacy-policy-aura-pro"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Shield className="h-4 w-4 mr-2" /> Privacy Policy
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
+                    <div className="mt-4 flex justify-center relative z-20" onClick={(e) => e.stopPropagation()}>
+                      <StoreBadge store="app-store" href={auraPro.appStore} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* UniChance Card */}
+              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
+                {/* Make the entire card clickable with an overlay link */}
+                <Link href="/uni-chance" className="absolute inset-0 z-10">
+                  <span className="sr-only">View UniChance details</span>
+                </Link>
+
+                <div className="h-48 bg-black flex items-center justify-center p-6">
+                  <div className="flex flex-col items-center">
+                    <AppIcon app="uni-chance" size="lg" className="mb-4" />
+                    <h3 className="text-3xl font-bold text-white">UniChance</h3>
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-card-foreground mb-4">
+                    Navigate the college admissions process with confidence using our AI-powered platform. Calculate
+                    your chances of getting into top universities.
+                  </p>
+                  <div className="mt-auto space-y-3">
+                    <Link
+                      href="/support-uni-chance"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <MessageSquare className="h-4 w-4 mr-2" /> Support
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="/privacy-policy-uni-chance"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Shield className="h-4 w-4 mr-2" /> Privacy Policy
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
+                    <div
+                      className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <StoreBadge store="app-store" href={uniChance.appStore} />
+                      <StoreBadge store="google-play" href={uniChance.googlePlay} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Link Card */}
+              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
+                {/* Make the entire card clickable with an overlay link */}
+                <Link href="/link" className="absolute inset-0 z-10">
+                  <span className="sr-only">View Link details</span>
+                </Link>
+
+                <div className="h-48 bg-black flex items-center justify-center p-6">
+                  <div className="flex flex-col items-center">
+                    <AppIcon app="link" size="lg" className="mb-4" />
+                    <h3 className="text-3xl font-bold text-white">Link</h3>
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-card-foreground mb-4">
+                    A dating app that leverages your mutual friends to create meaningful connections. Find potential
+                    partners through trusted social networks.
+                  </p>
+                  <div className="mt-auto space-y-3">
+                    <Link
+                      href="/support-link"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <MessageSquare className="h-4 w-4 mr-2" /> Support
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="/privacy-policy-link"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Shield className="h-4 w-4 mr-2" /> Privacy Policy
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
+                    <div
+                      className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <StoreBadge store="app-store" href={linkApp.appStore} />
+                      <StoreBadge store="google-play" href={linkApp.googlePlay} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-black">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-racing-green-200">
+              About Fontaine Labs
+            </h2>
+            <p className="mx-auto max-w-[700px] text-racing-green-300 text-center mb-8">
+              Founded with a passion for creating exceptional mobile experiences, Fontaine Labs LLC is dedicated to
+              developing innovative applications that solve real problems. Our team of talented developers, designers,
+              and product specialists work together to craft apps that are both beautiful and functional.
+            </p>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
+              Download Our Apps
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+              <div className="flex flex-col items-center text-center relative group">
+                <Link href="/aura-pro" className="absolute inset-0 z-10">
+                  <span className="sr-only">View Aura Pro details</span>
+                </Link>
+                <AppIcon app="aura-pro" size="xl" className="mb-6 cursor-pointer" />
+                <h3 className="text-2xl font-bold mb-3">Aura Pro</h3>
+                <p className="text-muted-foreground mb-6">
+                  Reveal your unique aura signature with our advanced facial analysis technology. Discover insights
+                  about your energy and spiritual alignment.
+                </p>
+                <div className="flex justify-center relative z-20" onClick={(e) => e.stopPropagation()}>
+                  <StoreBadge store="app-store" href={auraPro.appStore} />
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center text-center relative group">
+                <Link href="/uni-chance" className="absolute inset-0 z-10">
+                  <span className="sr-only">View UniChance details</span>
+                </Link>
+                <AppIcon app="uni-chance" size="xl" className="mb-6 cursor-pointer" />
+                <h3 className="text-2xl font-bold mb-3">UniChance</h3>
+                <p className="text-muted-foreground mb-6">
+                  Navigate the college admissions process with confidence using our comprehensive education platform
+                  with AI-powered insights.
+                </p>
+                <div className="flex flex-wrap justify-center gap-2 relative z-20" onClick={(e) => e.stopPropagation()}>
+                  <StoreBadge store="app-store" href={uniChance.appStore} />
+                  <StoreBadge store="google-play" href={uniChance.googlePlay} />
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center text-center relative group">
+                <Link href="/link" className="absolute inset-0 z-10">
+                  <span className="sr-only">View Link details</span>
+                </Link>
+                <AppIcon app="link" size="xl" className="mb-6 cursor-pointer" />
+                <h3 className="text-2xl font-bold mb-3">Link</h3>
+                <p className="text-muted-foreground mb-6">
+                  Connect with potential partners through mutual friends. Build meaningful relationships based on
+                  trusted social connections.
+                </p>
+                <div className="flex flex-wrap justify-center gap-2 relative z-20" onClick={(e) => e.stopPropagation()}>
+                  <StoreBadge store="app-store" href={linkApp.appStore} />
+                  <StoreBadge store="google-play" href={linkApp.googlePlay} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">Contact Us</h2>
+            <div className="mx-auto max-w-[500px] space-y-4">
+              <p className="text-center text-muted-foreground mb-6">
+                Have questions about our apps? We'd love to hear from you!
+              </p>
+              <Button className="w-full bg-primary hover:bg-racing-green-500 transition-colors">
+                <MessageSquare className="mr-2 h-4 w-4" /> Contact Support
+              </Button>
+              <p className="text-center text-sm text-muted-foreground mt-4">
+                Email: founder@fontainelabs.com
+                <br />
+                Business Hours: Monday-Friday, 9am-5pm EST
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Fontaine Labs LLC. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
-
