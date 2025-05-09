@@ -30,14 +30,19 @@ export default function LinkPage() {
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                   <StoreBadge store="app-store" href={linkApp.appStore} />
                   <StoreBadge store="google-play" href={linkApp.googlePlay} />
-                  <Link href="/support-link">
+                  <Link href="/link/support">
                     <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
                       <MessageSquare className="mr-2 h-4 w-4" /> Support
                     </Button>
                   </Link>
-                  <Link href="/privacy-policy-link">
+                  <Link href="/link/privacy">
                     <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
                       <Shield className="mr-2 h-4 w-4" /> Privacy Policy
+                    </Button>
+                  </Link>
+                  <Link href="/link/terms">
+                    <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
+                      <Shield className="mr-2 h-4 w-4" /> Terms of Service
                     </Button>
                   </Link>
                 </div>
@@ -69,20 +74,20 @@ export default function LinkPage() {
                 <div className="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4">
                   <Heart className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Meaningful Connections</h3>
+                <h3 className="text-xl font-bold mb-2">Double Opt-In Matching</h3>
                 <p className="text-muted-foreground">
-                  Build relationships based on real social connections rather than random matching. Friends of friends
-                  are more likely to share your values.
+                  Our double opt-in system ensures both parties express interest before a connection is made, creating
+                  more meaningful and respectful interactions.
                 </p>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-lg border border-border bg-card">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4">
                   <Lock className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Enhanced Safety</h3>
+                <h3 className="text-xl font-bold mb-2">Enhanced Privacy</h3>
                 <p className="text-muted-foreground">
-                  Feel more secure knowing your matches are connected to people you trust. Mutual connections create
-                  accountability.
+                  We only store your name and phone number in our secure database. Your personal information is never
+                  shared without your explicit consent.
                 </p>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-lg border border-border bg-card">
@@ -91,8 +96,8 @@ export default function LinkPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Verified Profiles</h3>
                 <p className="text-muted-foreground">
-                  All profiles are verified through social connections, reducing fake accounts and ensuring authentic
-                  interactions.
+                  All profiles are verified through our secure phone verification process, reducing fake accounts and
+                  ensuring authentic interactions.
                 </p>
               </div>
             </div>
@@ -107,9 +112,10 @@ export default function LinkPage() {
                 <div className="h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4 text-white font-bold">
                   1
                 </div>
-                <h3 className="text-xl font-bold mb-2">Connect Your Network</h3>
+                <h3 className="text-xl font-bold mb-2">Create Your Profile</h3>
                 <p className="text-muted-foreground">
-                  Securely link your social media accounts to identify your friends and their connections.
+                  Sign up with your phone number, verify your identity, and create your profile with photos and
+                  interests.
                 </p>
               </div>
               <div className="flex flex-col items-center text-center">
@@ -118,7 +124,8 @@ export default function LinkPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Discover Matches</h3>
                 <p className="text-muted-foreground">
-                  Browse potential matches who are connected to your friends. See who you know in common.
+                  Browse potential matches and express interest in profiles you like. We'll notify you when there's
+                  mutual interest.
                 </p>
               </div>
               <div className="flex flex-col items-center text-center">
@@ -127,7 +134,8 @@ export default function LinkPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Connect Safely</h3>
                 <p className="text-muted-foreground">
-                  Chat, meet, and build relationships with the added security of mutual connections.
+                  Chat, meet, and build relationships with the added security of our double opt-in system and verified
+                  profiles.
                 </p>
               </div>
             </div>
@@ -145,8 +153,8 @@ export default function LinkPage() {
                 Trust Your Dating Journey
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                "Link has transformed how I approach online dating. Meeting someone through mutual friends gave me
-                confidence and made the whole experience feel more natural."
+                "Link has transformed how I approach online dating. The double opt-in system made me feel respected, and
+                knowing that my personal information is secure gave me the confidence to be myself."
               </p>
               <p className="text-pink-400 font-medium">— Sarah T., Link User</p>
             </div>

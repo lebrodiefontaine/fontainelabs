@@ -45,7 +45,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/support-link" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/link/support" className="text-muted-foreground hover:text-primary transition-colors">
                   Link Support
                 </Link>
               </li>
@@ -55,8 +55,13 @@ export function SiteFooter() {
             <h3 className="font-bold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/link/terms" className="text-muted-foreground hover:text-primary transition-colors">
                   Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/link/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
