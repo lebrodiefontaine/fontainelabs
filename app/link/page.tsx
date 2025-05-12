@@ -164,19 +164,33 @@ export default function LinkPage() {
         <section className="w-full py-12 md:py-16 border-t border-border">
           <div className="container px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-8">Account Management</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <h2 className="text-2xl font-bold text-center mb-8">Resources</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Link href="/link/support" className="block">
                   <div className="border border-border rounded-lg p-6 h-full hover:border-pink-400 transition-colors">
                     <div className="flex items-center mb-4">
                       <div className="h-10 w-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mr-4">
                         <MessageSquare className="h-5 w-5 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold">Need Help?</h3>
+                      <h3 className="text-lg font-semibold">Support</h3>
                     </div>
                     <p className="text-muted-foreground">
                       Visit our support center for help with your account, troubleshooting, and frequently asked
                       questions.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/link/child-safety" className="block">
+                  <div className="border border-border rounded-lg p-6 h-full hover:border-pink-400 transition-colors">
+                    <div className="flex items-center mb-4">
+                      <div className="h-10 w-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mr-4">
+                        <Shield className="h-5 w-5 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Child Safety</h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      Learn about our commitment to child safety and how our minimal functionality approach prevents
+                      abuse.
                     </p>
                   </div>
                 </Link>

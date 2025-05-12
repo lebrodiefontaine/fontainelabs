@@ -65,8 +65,8 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Cookie Policy
+                <Link href="/link/child-safety" className="text-muted-foreground hover:text-primary transition-colors">
+                  Child Safety Standards
                 </Link>
               </li>
             </ul>
