@@ -111,7 +111,29 @@ export default function PrivacyPolicyLink() {
                   section below.
                 </p>
 
-                <h2 className="text-xl font-semibold mt-6 mb-4">8. CHILDREN'S PRIVACY</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-4">8. ACCOUNT DELETION</h2>
+                <p>
+                  You have the right to delete your account and personal information from our systems. To request
+                  account deletion, you can:
+                </p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>
+                    Use our{" "}
+                    <Link href="/link/deleteaccount" className="text-primary hover:text-pink-400">
+                      account deletion form
+                    </Link>
+                  </li>
+                  <li>Contact us directly at founder@fontainelabs.com</li>
+                  <li>Use the in-app deletion option in your account settings</li>
+                </ul>
+                <p>
+                  Upon receiving your request, we will verify your identity and process your account deletion within 30
+                  days. After deletion, your personal information will be permanently removed from our active systems,
+                  though some information may remain in our backup systems for a limited time in accordance with
+                  applicable laws.
+                </p>
+
+                <h2 className="text-xl font-semibold mt-6 mb-4">9. CHILDREN'S PRIVACY</h2>
                 <p>
                   Our App is not intended for individuals under the age of 18. We do not knowingly collect personal
                   information from children under 18. If you are a parent or guardian and believe your child has
@@ -119,14 +141,14 @@ export default function PrivacyPolicyLink() {
                   information.
                 </p>
 
-                <h2 className="text-xl font-semibold mt-6 mb-4">9. CHANGES TO THIS PRIVACY POLICY</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-4">10. CHANGES TO THIS PRIVACY POLICY</h2>
                 <p>
                   We may update this Privacy Policy from time to time. We will notify you of any changes by posting the
                   new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this
                   Privacy Policy periodically for any changes.
                 </p>
 
-                <h2 className="text-xl font-semibold mt-6 mb-4">10. CONTACT US</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-4">11. CONTACT US</h2>
                 <p>
                   If you have any questions about this Privacy Policy, please contact us at:
                   <br />

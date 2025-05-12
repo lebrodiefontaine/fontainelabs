@@ -96,11 +96,14 @@ export default function SupportLink() {
                   </div>
 
                   <div className="border border-border rounded-lg p-4">
-                    <h3 className="font-medium">Can I undo a like or pass?</h3>
+                    <h3 className="font-medium">How do I delete my account?</h3>
                     <p className="text-muted-foreground mt-2">
-                      Yes, you can change your mind. In the "Activity" section, you can view profiles you've liked or
-                      passed on and change your decision. However, if a match has already been made and conversation has
-                      started, you can't undo the match without unmatching.
+                      You can delete your account and all associated data by using our{" "}
+                      <Link href="/link/deleteaccount" className="text-primary hover:text-pink-400">
+                        account deletion form
+                      </Link>
+                      . You'll need to provide your phone number and name for verification. Once submitted, your account
+                      will be permanently deleted within 30 days.
                     </p>
                   </div>
                 </div>
@@ -147,6 +150,31 @@ export default function SupportLink() {
                   <li>Use our in-app reporting feature to flag inappropriate behavior</li>
                   <li>
                     Remember to follow standard dating safety practices like meeting in public places for the first time
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-semibold mt-8 mb-4">Account Management</h2>
+                <p>Managing your Link account:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>
+                    <strong>Update Profile:</strong> You can update your profile information and photos at any time
+                    through the app's Profile section.
+                  </li>
+                  <li>
+                    <strong>Privacy Settings:</strong> Adjust your privacy settings in the app to control who can see
+                    your profile and how you receive notifications.
+                  </li>
+                  <li>
+                    <strong>Pause Account:</strong> If you need a break, you can temporarily pause your account without
+                    losing your matches or conversations.
+                  </li>
+                  <li>
+                    <strong>Delete Account:</strong> If you wish to permanently delete your account and all associated
+                    data, use our{" "}
+                    <Link href="/link/deleteaccount" className="text-primary hover:text-pink-400">
+                      account deletion form
+                    </Link>
+                    .
                   </li>
                 </ul>
 

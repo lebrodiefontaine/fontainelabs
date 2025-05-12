@@ -4,7 +4,7 @@ import { AppIcon } from "@/components/app-icon"
 import { StoreBadge } from "@/components/store-badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Shield, MessageSquare, CheckCircle, Users, Heart, Lock } from "lucide-react"
+import { Shield, MessageSquare, CheckCircle, Users, Heart, Lock, Trash2 } from "lucide-react"
 
 export default function LinkPage() {
   // Link App Store URL (placeholder)
@@ -157,6 +157,43 @@ export default function LinkPage() {
                 knowing that my personal information is secure gave me the confidence to be myself."
               </p>
               <p className="text-pink-400 font-medium">— Sarah T., Link User</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-16 border-t border-border">
+          <div className="container px-4 md:px-6">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold text-center mb-8">Account Management</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Link href="/link/support" className="block">
+                  <div className="border border-border rounded-lg p-6 h-full hover:border-pink-400 transition-colors">
+                    <div className="flex items-center mb-4">
+                      <div className="h-10 w-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mr-4">
+                        <MessageSquare className="h-5 w-5 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Need Help?</h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      Visit our support center for help with your account, troubleshooting, and frequently asked
+                      questions.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/link/deleteaccount" className="block">
+                  <div className="border border-border rounded-lg p-6 h-full hover:border-red-500 transition-colors">
+                    <div className="flex items-center mb-4">
+                      <div className="h-10 w-10 rounded-full bg-red-900/20 flex items-center justify-center mr-4">
+                        <Trash2 className="h-5 w-5 text-red-500" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Delete Account</h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      Want to delete your account? Use our secure account deletion form to permanently remove your data.
+                    </p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
