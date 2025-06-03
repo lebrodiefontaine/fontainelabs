@@ -61,7 +61,7 @@ export default function DeleteAccountLink() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-md mx-auto">
             <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Link
+              <ArrowLeft className="mr-2 h-4 w-4 text-gray-600" /> Back to Link
             </Link>
 
             <div className="bg-card rounded-lg shadow-lg p-8 border border-border">

@@ -7,10 +7,10 @@ import Link from "next/link"
 import { Shield, MessageSquare, CheckCircle, Users, Heart, Lock, Trash2 } from "lucide-react"
 
 export default function LinkPage() {
-  // Link App Store URL (placeholder)
+  // Link App Store and Google Play URLs
   const linkApp = {
-    appStore: "#", // Placeholder - replace with actual App Store URL when available
-    googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
+    appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
 
   return (
@@ -32,17 +32,17 @@ export default function LinkPage() {
                   <StoreBadge store="google-play" href={linkApp.googlePlay} />
                   <Link href="/link/support">
                     <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
-                      <MessageSquare className="mr-2 h-4 w-4" /> Support
+                      <MessageSquare className="mr-2 h-4 w-4 text-gray-600" /> Support
                     </Button>
                   </Link>
                   <Link href="/link/privacy">
                     <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
-                      <Shield className="mr-2 h-4 w-4" /> Privacy Policy
+                      <Shield className="mr-2 h-4 w-4 text-gray-600" /> Privacy Policy
                     </Button>
                   </Link>
                   <Link href="/link/terms">
                     <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
-                      <Shield className="mr-2 h-4 w-4" /> Terms of Service
+                      <Shield className="mr-2 h-4 w-4 text-gray-600" /> Terms of Service
                     </Button>
                   </Link>
                 </div>
@@ -61,8 +61,8 @@ export default function LinkPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div className="flex flex-col items-center text-center p-6 rounded-lg border border-border bg-card">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4">
-                  <Users className="h-8 w-8 text-white" />
+                <div className="h-16 w-16 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                  <Users className="h-8 w-8 text-gray-300" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Mutual Friend Matching</h3>
                 <p className="text-muted-foreground">
@@ -71,8 +71,8 @@ export default function LinkPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-lg border border-border bg-card">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4">
-                  <Heart className="h-8 w-8 text-white" />
+                <div className="h-16 w-16 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                  <Heart className="h-8 w-8 text-gray-300" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Double Opt-In Matching</h3>
                 <p className="text-muted-foreground">
@@ -81,8 +81,8 @@ export default function LinkPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-lg border border-border bg-card">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4">
-                  <Lock className="h-8 w-8 text-white" />
+                <div className="h-16 w-16 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                  <Lock className="h-8 w-8 text-gray-300" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Enhanced Privacy</h3>
                 <p className="text-muted-foreground">
@@ -91,8 +91,8 @@ export default function LinkPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center text-center p-6 rounded-lg border border-border bg-card">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4">
-                  <CheckCircle className="h-8 w-8 text-white" />
+                <div className="h-16 w-16 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                  <CheckCircle className="h-8 w-8 text-gray-300" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Verified Profiles</h3>
                 <p className="text-muted-foreground">
@@ -109,7 +109,7 @@ export default function LinkPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center mb-12">How It Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4 text-white font-bold">
+                <div className="h-12 w-12 rounded-full bg-gray-700 flex items-center justify-center mb-4 text-white font-bold">
                   1
                 </div>
                 <h3 className="text-xl font-bold mb-2">Create Your Profile</h3>
@@ -119,7 +119,7 @@ export default function LinkPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4 text-white font-bold">
+                <div className="h-12 w-12 rounded-full bg-gray-700 flex items-center justify-center mb-4 text-white font-bold">
                   2
                 </div>
                 <h3 className="text-xl font-bold mb-2">Discover Matches</h3>
@@ -129,7 +129,7 @@ export default function LinkPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4 text-white font-bold">
+                <div className="h-12 w-12 rounded-full bg-gray-700 flex items-center justify-center mb-4 text-white font-bold">
                   3
                 </div>
                 <h3 className="text-xl font-bold mb-2">Connect Safely</h3>
@@ -169,8 +169,8 @@ export default function LinkPage() {
                 <Link href="/link/support" className="block">
                   <div className="border border-border rounded-lg p-6 h-full hover:border-pink-400 transition-colors">
                     <div className="flex items-center mb-4">
-                      <div className="h-10 w-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mr-4">
-                        <MessageSquare className="h-5 w-5 text-white" />
+                      <div className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center mr-4">
+                        <MessageSquare className="h-5 w-5 text-gray-300" />
                       </div>
                       <h3 className="text-lg font-semibold">Support</h3>
                     </div>
@@ -183,8 +183,8 @@ export default function LinkPage() {
                 <Link href="/link/child-safety" className="block">
                   <div className="border border-border rounded-lg p-6 h-full hover:border-pink-400 transition-colors">
                     <div className="flex items-center mb-4">
-                      <div className="h-10 w-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mr-4">
-                        <Shield className="h-5 w-5 text-white" />
+                      <div className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center mr-4">
+                        <Shield className="h-5 w-5 text-gray-300" />
                       </div>
                       <h3 className="text-lg font-semibold">Child Safety</h3>
                     </div>

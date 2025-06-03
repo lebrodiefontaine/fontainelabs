@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { LinkIcon } from "lucide-react"
 
 interface AppIconProps {
   app: "aura-pro" | "uni-chance" | "link"
@@ -18,22 +17,21 @@ export function AppIcon({ app, size = "md", className }: AppIconProps) {
 
   const pixelSize = sizes[size]
 
-  // For Link app, we'll use a placeholder icon
-  if (app === "link") {
-    return (
-      <div
-        className={cn(
-          "relative overflow-hidden shadow-lg rounded-[22%] flex items-center justify-center bg-gradient-to-br from-pink-500 to-purple-600",
-          className,
-        )}
-        style={{ width: pixelSize, height: pixelSize }}
-      >
-        <LinkIcon className="text-white" style={{ width: pixelSize / 2, height: pixelSize / 2 }} />
-      </div>
-    )
+  // Get the appropriate icon path
+  const getIconPath = () => {
+    switch (app) {
+      case "aura-pro":
+        return "/app-icons/aura-pro-icon.png"
+      case "uni-chance":
+        return "/app-icons/uni-chance-icon.png"
+      case "link":
+        return "/app-icons/link-icon.png"
+      default:
+        return "/placeholder.svg"
+    }
   }
 
-  const iconPath = app === "aura-pro" ? "/app-icons/aura-pro-icon.png" : "/app-icons/uni-chance-icon.png"
+  const iconPath = getIconPath()
 
   // iOS-style rounded corners
   const roundedStyle = "rounded-[22%]" // iOS app icon style rounded corners
@@ -45,7 +43,7 @@ export function AppIcon({ app, size = "md", className }: AppIconProps) {
     >
       <Image
         src={iconPath || "/placeholder.svg"}
-        alt={app === "aura-pro" ? "Aura Pro App Icon" : "UniChance App Icon"}
+        alt={`${app} App Icon`}
         width={pixelSize}
         height={pixelSize}
         className="object-cover"

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { Play } from "lucide-react"
 
 interface GooglePlayBadgeProps {
   href: string
@@ -16,7 +17,8 @@ export function GooglePlayBadge({ href, className = "" }: GooglePlayBadgeProps) 
       className={`inline-block ${className} transition-transform hover:scale-105`}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="h-[40px] bg-black text-white rounded-md px-4 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+      <div className="h-[40px] min-w-[140px] bg-black text-white rounded-md px-4 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+        <Play className="h-5 w-5 mr-2 text-white" />
         <div className="flex flex-col">
           <span className="text-[8px]">GET IT ON</span>
           <span className="text-[16px] font-semibold">Google Play</span>

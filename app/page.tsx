@@ -20,10 +20,10 @@ export default function Home() {
     googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
   }
 
-  // Link App Store and Google Play URLs (placeholders)
+  // Link App Store and Google Play URLs
   const linkApp = {
-    appStore: "#", // Placeholder - replace with actual App Store URL when available
-    googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
+    appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
 
   return (
@@ -82,16 +82,16 @@ export default function Home() {
                       className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <MessageSquare className="h-4 w-4 mr-2" /> Support
-                      <ChevronRight className="ml-1 h-4 w-4" />
+                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
                     </Link>
                     <Link
                       href="/privacy-policy-aura-pro"
                       className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Shield className="h-4 w-4 mr-2" /> Privacy Policy
-                      <ChevronRight className="ml-1 h-4 w-4" />
+                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
                     </Link>
                     <div className="mt-4 flex justify-center relative z-20" onClick={(e) => e.stopPropagation()}>
                       <StoreBadge store="app-store" href={auraPro.appStore} />
@@ -124,16 +124,16 @@ export default function Home() {
                       className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <MessageSquare className="h-4 w-4 mr-2" /> Support
-                      <ChevronRight className="ml-1 h-4 w-4" />
+                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
                     </Link>
                     <Link
                       href="/privacy-policy-uni-chance"
                       className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Shield className="h-4 w-4 mr-2" /> Privacy Policy
-                      <ChevronRight className="ml-1 h-4 w-4" />
+                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
                     </Link>
                     <div
                       className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
@@ -170,16 +170,16 @@ export default function Home() {
                       className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <MessageSquare className="h-4 w-4 mr-2" /> Support
-                      <ChevronRight className="ml-1 h-4 w-4" />
+                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
                     </Link>
                     <Link
                       href="/privacy-policy-link"
                       className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Shield className="h-4 w-4 mr-2" /> Privacy Policy
-                      <ChevronRight className="ml-1 h-4 w-4" />
+                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
                     </Link>
                     <div
                       className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
@@ -273,7 +273,7 @@ export default function Home() {
                 Have questions about our apps? We'd love to hear from you!
               </p>
               <Button className="w-full bg-primary hover:bg-racing-green-500 transition-colors">
-                <MessageSquare className="mr-2 h-4 w-4" /> Contact Support
+                <MessageSquare className="mr-2 h-4 w-4 text-gray-600" /> Contact Support
               </Button>
               <p className="text-center text-sm text-muted-foreground mt-4">
                 Email: founder@fontainelabs.com

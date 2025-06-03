@@ -180,7 +180,7 @@ export default function ChildSafetyLink() {
                   <p className="text-muted-foreground mt-1">
                     Email: safety@fontainelabs.com
                     <br />
-                    Phone: (555) 123-4567
+                    Phone: +852 5518 4873
                     <br />
                     Available: Monday-Friday, 9am-5pm EST
                   </p>
