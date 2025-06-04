@@ -17,11 +17,11 @@ export function AppStoreBadge({ href, className = "" }: AppStoreBadgeProps) {
       className={`inline-block ${className} transition-transform hover:scale-105`}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="h-[40px] min-w-[140px] bg-black text-white rounded-md px-4 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
-        <Apple className="h-5 w-5 mr-2 text-white" />
+      <div className="h-[50px] w-full bg-black text-white rounded-xl px-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow">
+        <Apple className="h-6 w-6 mr-3 text-white" />
         <div className="flex flex-col">
-          <span className="text-[8px]">Download on the</span>
-          <span className="text-[16px] font-semibold">App Store</span>
+          <span className="text-[10px] leading-none">Download on the</span>
+          <span className="text-[18px] font-semibold leading-tight">App Store</span>
         </div>
       </div>
     </Link>
