@@ -33,11 +33,8 @@ export function AppIcon({ app, size = "md", className }: AppIconProps) {
 
   const iconPath = getIconPath()
 
-  // iOS-style rounded corners with proper masking for the Link icon
-  const roundedStyle =
-    app === "link"
-      ? "rounded-[18%] bg-white dark:bg-gray-100" // Smaller rounded corners for Link icon
-      : "rounded-[22%]" // Standard iOS app icon style for others
+  // iOS-style rounded corners
+  const roundedStyle = "rounded-[22%]" // iOS app icon style rounded corners
 
   return (
     <div
@@ -49,10 +46,7 @@ export function AppIcon({ app, size = "md", className }: AppIconProps) {
         alt={`${app} App Icon`}
         width={pixelSize}
         height={pixelSize}
-        className={cn(
-          "object-cover",
-          app === "link" ? "" : "", // No padding for Link icon to maximize size
-        )}
+        className="object-cover"
       />
     </div>
   )
