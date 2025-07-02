@@ -1,175 +1,128 @@
 import Link from "next/link"
-import { ArrowLeft, Mail, MessageCircle, Book } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ArrowLeft, Mail, MessageCircle, Book } from "lucide-react"
 
 export default function Support() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <Link href="/link">
-              <Button variant="ghost" className="mb-4">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Likeback
-              </Button>
-            </Link>
-            <h1 className="text-4xl font-bold mb-2">Support</h1>
-            <p className="text-muted-foreground">Get help with Likeback</p>
-          </div>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="mb-8">
+        <Link href="/link">
+          <Button variant="ghost" className="mb-4">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Likeback
+          </Button>
+        </Link>
+        <h1 className="text-4xl font-bold mb-2">Support</h1>
+        <p className="text-muted-foreground">Get help with Likeback</p>
+      </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Mail className="h-5 w-5" />
-                  Email Support
-                </CardTitle>
-                <CardDescription>Get personalized help from our support team</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Send us an email and we'll get back to you within 24 hours.
-                </p>
-                <Button asChild className="w-full">
-                  <a href="mailto:support@fontainelabs.com?subject=Likeback Support">Contact Support</a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MessageCircle className="h-5 w-5" />
-                  Community
-                </CardTitle>
-                <CardDescription>Connect with other Likeback users</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Join our community to share tips and get help from other users.
-                </p>
-                <Button variant="outline" className="w-full bg-transparent">
-                  Coming Soon
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Book className="h-5 w-5" />
-                  Documentation
-                </CardTitle>
-                <CardDescription>Learn how to use Likeback features</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Browse our guides and tutorials to get the most out of Likeback.
-                </p>
-                <Button variant="outline" className="w-full bg-transparent">
-                  Coming Soon
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">How do I create my bio link?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>
-                      After downloading Likeback, simply create an account and start customizing your profile. Add your
-                      social media links, bio information, and choose from our selection of themes to create your
-                      personalized bio link page.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Can I customize the appearance of my profile?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>
-                      Yes! Likeback offers various customization options including themes, colors, and layouts. You can
-                      personalize your profile to match your brand or personal style.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Is Likeback free to use?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>
-                      Likeback offers both free and premium features. Basic bio link functionality is free, with
-                      additional customization options and analytics available through our premium plans.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">How do I share my bio link?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>
-                      Once you've created your profile, Likeback generates a unique URL that you can share on your
-                      social media profiles, email signatures, or anywhere you want to direct people to all your
-                      important links in one place.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Can I track clicks and analytics?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>
-                      Yes, Likeback provides analytics to help you understand how your bio link is performing. You can
-                      see click counts, popular links, and visitor insights to optimize your profile.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold mb-4">Still Need Help?</h2>
-              <Card>
-                <CardContent className="pt-6">
-                  <p className="mb-4">
-                    If you can't find the answer to your question in our FAQ, don't hesitate to reach out to our support
-                    team. We're here to help you get the most out of Likeback.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild>
-                      <a href="mailto:support@fontainelabs.com?subject=Likeback Support Request">
-                        <Mail className="mr-2 h-4 w-4" />
-                        Email Support
-                      </a>
-                    </Button>
-                    <Button variant="outline" asChild>
-                      <Link href="/link/privacy">View Privacy Policy</Link>
-                    </Button>
-                    <Button variant="outline" asChild>
-                      <Link href="/link/terms">View Terms of Service</Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </section>
-          </div>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+        <div className="p-6 border rounded-lg">
+          <Mail className="h-8 w-8 mb-4 text-primary" />
+          <h3 className="text-lg font-semibold mb-2">Email Support</h3>
+          <p className="text-muted-foreground mb-4">Send us an email and we'll get back to you within 24 hours.</p>
+          <Button asChild>
+            <a href="mailto:support@fontainelabs.com">Contact Support</a>
+          </Button>
         </div>
+
+        <div className="p-6 border rounded-lg">
+          <MessageCircle className="h-8 w-8 mb-4 text-primary" />
+          <h3 className="text-lg font-semibold mb-2">In-App Help</h3>
+          <p className="text-muted-foreground mb-4">
+            Access help articles and tutorials directly within the Likeback app.
+          </p>
+          <Button variant="outline">Open App</Button>
+        </div>
+
+        <div className="p-6 border rounded-lg">
+          <Book className="h-8 w-8 mb-4 text-primary" />
+          <h3 className="text-lg font-semibold mb-2">FAQ</h3>
+          <p className="text-muted-foreground mb-4">Find answers to commonly asked questions about Likeback.</p>
+          <Button variant="outline">View FAQ</Button>
+        </div>
+      </div>
+
+      <div className="prose prose-gray dark:prose-invert max-w-none">
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">How do I create an account on Likeback?</h3>
+              <p className="text-muted-foreground">
+                Download the Likeback app from the App Store or Google Play Store, then tap "Sign Up" and follow the
+                prompts to create your account using your email address or phone number.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">How do I reset my password?</h3>
+              <p className="text-muted-foreground">
+                On the login screen, tap "Forgot Password?" and enter your email address. We'll send you a link to reset
+                your password.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">How do I delete my Likeback account?</h3>
+              <p className="text-muted-foreground">
+                Go to Settings &gt; Account &gt; Delete Account in the Likeback app. Please note that this action is
+                permanent and cannot be undone.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">How do I report inappropriate content or behavior?</h3>
+              <p className="text-muted-foreground">
+                Tap the three dots menu on any post or profile, then select "Report." Choose the appropriate reason and
+                provide additional details if necessary.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">How do I change my privacy settings?</h3>
+              <p className="text-muted-foreground">
+                Go to Settings &gt; Privacy in the Likeback app to control who can see your posts, send you messages,
+                and find your profile.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Why isn't Likeback working properly?</h3>
+              <p className="text-muted-foreground">
+                Try closing and reopening the app, checking your internet connection, or updating to the latest version
+                of Likeback. If problems persist, contact our support team.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
+          <p className="mb-4">
+            If you need additional help or have questions not covered in our FAQ, please don't hesitate to reach out:
+          </p>
+          <div className="bg-muted p-4 rounded-lg">
+            <p className="mb-2">
+              <strong>Email:</strong> support@fontainelabs.com
+            </p>
+            <p className="mb-2">
+              <strong>Response Time:</strong> Within 24 hours
+            </p>
+            <p className="mb-2">
+              <strong>Business Hours:</strong> Monday - Friday, 9 AM - 6 PM EST
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Feedback</h2>
+          <p className="mb-4">
+            We're always looking to improve Likeback. If you have suggestions, feature requests, or general feedback,
+            we'd love to hear from you at feedback@fontainelabs.com.
+          </p>
+        </section>
       </div>
     </div>
   )
