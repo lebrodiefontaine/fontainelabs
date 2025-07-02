@@ -22,7 +22,7 @@ export default function LinkPage() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
               <div className="flex-1 text-center md:text-left">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 mb-4">
-                  Link
+                  Likeback
                 </h1>
                 <p className="text-pink-200 text-xl mb-6">
                   Dating through trusted connections. Discover meaningful relationships through mutual friends.
@@ -153,10 +153,10 @@ export default function LinkPage() {
                 Trust Your Dating Journey
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                "Link has transformed how I approach online dating. The double opt-in system made me feel respected, and
+                "Likeback has transformed how I approach online dating. The double opt-in system made me feel respected, and
                 knowing that my personal information is secure gave me the confidence to be myself."
               </p>
-              <p className="text-pink-400 font-medium">— Sarah T., Link User</p>
+              <p className="text-pink-400 font-medium">— Sarah T., Likeback User</p>
             </div>
           </div>
         </section>

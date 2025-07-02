@@ -12,13 +12,13 @@ export default function PrivacyPolicyLink() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
             <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Link
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Likeback
             </Link>
 
             <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
               <div className="flex items-center mb-6">
                 <AppIcon app="link" size="md" className="mr-4" />
-                <h1 className="text-3xl font-bold">Link Privacy Policy</h1>
+                <h1 className="text-3xl font-bold">Likeback Privacy Policy</h1>
               </div>
 
               <div className="prose prose-invert max-w-none">
@@ -27,7 +27,7 @@ export default function PrivacyPolicyLink() {
                 <h2 className="text-xl font-semibold mt-6 mb-4">1. INTRODUCTION</h2>
                 <p>
                   At Fontaine Labs LLC ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy
-                  Policy explains how we collect, use, and safeguard your information when you use our Link mobile
+                  Policy explains how we collect, use, and safeguard your information when you use our Likeback mobile
                   application (the "App").
                 </p>
 
