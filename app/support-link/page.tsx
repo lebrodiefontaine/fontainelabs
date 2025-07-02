@@ -4,7 +4,7 @@ import { AppIcon } from "@/components/app-icon"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
-export default function SupportLink() {
+export default function SupportLikeback() {
   return (
     <div className="flex flex-col min-h-screen">
       <SiteHeader />
@@ -12,25 +12,25 @@ export default function SupportLink() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
             <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Link
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Likeback
             </Link>
 
             <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
               <div className="flex items-center mb-6">
                 <AppIcon app="link" size="md" className="mr-4" />
-                <h1 className="text-3xl font-bold">Link Support Center</h1>
+                <h1 className="text-3xl font-bold">Likeback Support Center</h1>
               </div>
 
               <div className="prose prose-invert max-w-none">
                 <p className="text-lg mb-6">
-                  Welcome to the Link support center. We're here to help you make meaningful connections through your
-                  social network. This guide will help you get the most out of your Link experience.
+                  Welcome to the Likeback support center. We're here to help you make meaningful connections through your
+                  social network. This guide will help you get the most out of your Likeback experience.
                 </p>
 
                 <h2 className="text-xl font-semibold mt-6 mb-4">Getting Started</h2>
                 <h3 className="text-lg font-medium mt-4 mb-2">Creating Your Profile</h3>
                 <ol className="list-decimal pl-6 my-4 space-y-2">
-                  <li>Download and open the Link app</li>
+                  <li>Download and open the Likeback app</li>
                   <li>Sign up with your phone number or email</li>
                   <li>Verify your identity through our secure verification process</li>
                   <li>Connect your social media accounts to find mutual connections</li>
@@ -42,7 +42,7 @@ export default function SupportLink() {
                 <ol className="list-decimal pl-6 my-4 space-y-2">
                   <li>Browse your suggested matches in the Discover tab</li>
                   <li>View mutual friends for each potential match</li>
-                  <li>Express interest by sending a "Link Request"</li>
+                  <li>Express interest by sending a "Likeback Request"</li>
                   <li>When someone accepts your request, you'll be able to message each other</li>
                   <li>Use conversation starters based on mutual interests and connections</li>
                 </ol>
@@ -61,9 +61,9 @@ export default function SupportLink() {
 
                 <div className="space-y-4">
                   <div className="border border-border rounded-lg p-4">
-                    <h3 className="font-medium">How does Link find mutual friends?</h3>
+                    <h3 className="font-medium">How does Likeback find mutual friends?</h3>
                     <p className="text-muted-foreground mt-2">
-                      Link analyzes your connected social networks to identify friends you have in common with potential
+                      Likeback analyzes your connected social networks to identify friends you have in common with potential
                       matches. We only use connection data, never content from your social accounts. The more networks
                       you connect, the more mutual connections we can find.
                     </p>
@@ -72,8 +72,8 @@ export default function SupportLink() {
                   <div className="border border-border rounded-lg p-4">
                     <h3 className="font-medium">Is my social media data secure?</h3>
                     <p className="text-muted-foreground mt-2">
-                      Yes. Link only accesses your friends list to identify mutual connections. We never post to your
-                      accounts, read your messages, or access your personal content. Your connection to Link remains
+                      Yes. Likeback only accesses your friends list to identify mutual connections. We never post to your
+                      accounts, read your messages, or access your personal content. Your connection to Likeback remains
                       private and isn't visible to your social network contacts.
                     </p>
                   </div>
@@ -90,7 +90,7 @@ export default function SupportLink() {
                   <div className="border border-border rounded-lg p-4">
                     <h3 className="font-medium">What if I don't have many social connections?</h3>
                     <p className="text-muted-foreground mt-2">
-                      While Link works best with an established social network, you can still use the app with fewer
+                      While Likeback works best with an established social network, you can still use the app with fewer
                       connections. We offer an "Expanded Network" feature that includes second and third-degree
                       connections to help you find more potential matches.
                     </p>
@@ -99,7 +99,7 @@ export default function SupportLink() {
                   <div className="border border-border rounded-lg p-4">
                     <h3 className="font-medium">Will my friends know if I match with their friends?</h3>
                     <p className="text-muted-foreground mt-2">
-                      No. Your activity on Link is private. We don't notify mutual friends when connections are made,
+                      No. Your activity on Likeback is private. We don't notify mutual friends when connections are made,
                       and we never share your dating preferences or activity with your social network. You control if
                       and when you want to mention your connection to others.
                     </p>
@@ -112,9 +112,9 @@ export default function SupportLink() {
                 <p>If you're having trouble connecting your social accounts:</p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>Ensure you're using the correct login credentials</li>
-                  <li>Check that you've granted Link the necessary permissions</li>
+                  <li>Check that you've granted Likeback the necessary permissions</li>
                   <li>Try logging out of the social network and back in before connecting</li>
-                  <li>Update both Link and your social media apps to the latest versions</li>
+                  <li>Update both Likeback and your social media apps to the latest versions</li>
                   <li>Try disconnecting and reconnecting the account</li>
                 </ul>
 
@@ -139,7 +139,7 @@ export default function SupportLink() {
                 </ul>
 
                 <h2 className="text-xl font-semibold mt-8 mb-4">Safety and Privacy</h2>
-                <p>At Link, your safety is our priority:</p>
+                <p>At Likeback, your safety is our priority:</p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>Use our in-app reporting feature to flag inappropriate behavior or suspicious profiles</li>
                   <li>
@@ -171,7 +171,7 @@ export default function SupportLink() {
                 </ul>
 
                 <p className="mt-6">
-                  Thank you for choosing Link. We're committed to helping you build meaningful connections through your
+                  Thank you for choosing Likeback. We're committed to helping you build meaningful connections through your
                   trusted social network.
                 </p>
               </div>
