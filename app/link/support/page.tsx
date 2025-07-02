@@ -4,7 +4,7 @@ import { AppIcon } from "@/components/app-icon"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
-export default function SupportLikeback() {
+export default function SupportLink() {
   return (
     <div className="flex flex-col min-h-screen">
       <SiteHeader />
@@ -12,25 +12,25 @@ export default function SupportLikeback() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
             <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Likeback
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to LikeBack
             </Link>
 
             <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
               <div className="flex items-center mb-6">
                 <AppIcon app="link" size="md" className="mr-4" />
-                <h1 className="text-3xl font-bold">Likeback Support Center</h1>
+                <h1 className="text-3xl font-bold">LikeBack Support Center</h1>
               </div>
 
               <div className="prose prose-invert max-w-none">
                 <p className="text-lg mb-6">
-                  Welcome to the Likeback support center. We're here to help you make meaningful connections through our
-                  double opt-in dating app. This guide will help you get the most out of your Likeback experience.
+                  Welcome to the LikeBack support center. We're here to help you make meaningful connections through our
+                  double opt-in dating app. This guide will help you get the most out of your LikeBack experience.
                 </p>
 
                 <h2 className="text-xl font-semibold mt-6 mb-4">Getting Started</h2>
                 <h3 className="text-lg font-medium mt-4 mb-2">Creating Your Profile</h3>
                 <ol className="list-decimal pl-6 my-4 space-y-2">
-                  <li>Download and open the Likeback app</li>
+                  <li>Download and open the LikeBack app</li>
                   <li>Enter your phone number to receive a verification code</li>
                   <li>Enter the verification code to confirm your identity</li>
                   <li>Add your name and profile photos</li>
@@ -39,7 +39,7 @@ export default function SupportLikeback() {
                 </ol>
 
                 <h3 className="text-lg font-medium mt-4 mb-2">Understanding Double Opt-In</h3>
-                <p>Likeback uses a double opt-in system to ensure respectful and mutual connections:</p>
+                <p>LikeBack uses a double opt-in system to ensure respectful and mutual connections:</p>
                 <ol className="list-decimal pl-6 my-4 space-y-2">
                   <li>When you express interest in someone, they won't be notified</li>
                   <li>If they also express interest in you, both of you will be notified of the match</li>
@@ -60,9 +60,9 @@ export default function SupportLikeback() {
 
                 <div className="space-y-4">
                   <div className="border border-border rounded-lg p-4">
-                    <h3 className="font-medium">What information does Likeback store about me?</h3>
+                    <h3 className="font-medium">What information does LikeBack store about me?</h3>
                     <p className="text-muted-foreground mt-2">
-                      Likeback only stores your name and phone number in our secure database. We prioritize your privacy
+                      LikeBack only stores your name and phone number in our secure database. We prioritize your privacy
                       and only collect the minimum information necessary to provide our service. Your phone number is
                       used for account verification and security.
                     </p>
@@ -141,7 +141,7 @@ export default function SupportLikeback() {
                 </ul>
 
                 <h2 className="text-xl font-semibold mt-8 mb-4">Safety and Privacy</h2>
-                <p>At Likeback, your safety and privacy are our priorities:</p>
+                <p>At LikeBack, your safety and privacy are our priorities:</p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>We only store your name and phone number in our secure database</li>
                   <li>Your phone number is never visible to other users</li>
@@ -154,7 +154,7 @@ export default function SupportLikeback() {
                 </ul>
 
                 <h2 className="text-xl font-semibold mt-8 mb-4">Account Management</h2>
-                <p>Managing your Likeback account:</p>
+                <p>Managing your LikeBack account:</p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>
                     <strong>Update Profile:</strong> You can update your profile information and photos at any time
@@ -194,7 +194,7 @@ export default function SupportLikeback() {
                 </ul>
 
                 <p className="mt-6">
-                  Thank you for choosing Likeback. We're committed to helping you build meaningful connections through
+                  Thank you for choosing LikeBack. We're committed to helping you build meaningful connections through
                   our secure, double opt-in dating platform.
                 </p>
               </div>

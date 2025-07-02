@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Shield, AlertTriangle, CheckCircle } from "lucide-react"
 
-export default function ChildSafetyLikeback() {
+export default function ChildSafetyLink() {
   return (
     <div className="flex flex-col min-h-screen">
       <SiteHeader />
@@ -13,14 +13,14 @@ export default function ChildSafetyLikeback() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
             <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Likeback
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to LikeBack
             </Link>
 
             <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
               <div className="flex items-center mb-6">
                 <AppIcon app="link" size="md" className="mr-4" />
                 <div>
-                  <h1 className="text-3xl font-bold">Likeback Child Safety Standards</h1>
+                  <h1 className="text-3xl font-bold">LikeBack Child Safety Standards</h1>
                   <p className="text-muted-foreground mt-1">
                     Our commitment to preventing child sexual abuse and exploitation
                   </p>
@@ -33,15 +33,15 @@ export default function ChildSafetyLikeback() {
                   <div>
                     <p className="text-yellow-500 font-medium">Important Notice</p>
                     <p className="text-yellow-400/80 text-sm mt-1">
-                      Likeback is designed for adults 18+ only. We have implemented strict measures to ensure our
+                      LikeBack is designed for adults 18+ only. We have implemented strict measures to ensure our
                       platform remains safe and appropriate for our adult users.
                     </p>
                   </div>
                 </div>
 
-                <h2 className="text-xl font-semibold mt-6 mb-4">Likeback's Minimal Functionality Approach</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-4">LikeBack's Minimal Functionality Approach</h2>
                 <p>
-                  Likeback is fundamentally different from most dating and social apps. We've intentionally designed our
+                  LikeBack is fundamentally different from most dating and social apps. We've intentionally designed our
                   platform with minimal functionality to prioritize safety and privacy:
                 </p>
 
@@ -54,7 +54,7 @@ export default function ChildSafetyLikeback() {
                       <div>
                         <h3 className="font-medium text-base">No Photo or Video Uploads</h3>
                         <p className="text-sm text-muted-foreground mt-1">
-                          Likeback does not allow users to upload, share, or exchange photos or videos of any kind.
+                          LikeBack does not allow users to upload, share, or exchange photos or videos of any kind.
                         </p>
                       </div>
                     </div>
@@ -82,7 +82,7 @@ export default function ChildSafetyLikeback() {
                       <div>
                         <h3 className="font-medium text-base">No Meeting Strangers</h3>
                         <p className="text-sm text-muted-foreground mt-1">
-                          Likeback only notifies users of mutual interest. Users cannot browse or discover strangers.
+                          Link only notifies users of mutual interest. Users cannot browse or discover strangers.
                         </p>
                       </div>
                     </div>
@@ -105,7 +105,7 @@ export default function ChildSafetyLikeback() {
 
                 <h2 className="text-xl font-semibold mt-8 mb-4">Child Safety Standards Compliance</h2>
                 <p>
-                  Despite Likeback's minimal functionality that inherently prevents many safety concerns, we are fully
+                  Despite LikeBack's minimal functionality that inherently prevents many safety concerns, we are fully
                   committed to complying with Google Play's Child Safety Standards policy. Here's how we address each
                   requirement:
                 </p>
@@ -118,7 +118,7 @@ export default function ChildSafetyLikeback() {
                 </p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>
-                    We strictly prohibit the use of Likeback by individuals under the age of 18, enforced through our
+                    We strictly prohibit the use of LikeBack by individuals under the age of 18, enforced through our
                     phone verification system
                   </li>
                   <li>We prohibit any attempt to use our platform to contact, groom, or exploit minors in any way</li>
@@ -130,7 +130,7 @@ export default function ChildSafetyLikeback() {
 
                 <h3 className="text-lg font-medium mt-6 mb-3">2. In-App Mechanism for User Feedback</h3>
                 <p>
-                  Although Likeback does not allow content sharing or direct communication between users, we provide
+                  Although Link does not allow content sharing or direct communication between users, we provide
                   multiple channels for users to report concerns:
                 </p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
@@ -140,7 +140,7 @@ export default function ChildSafetyLikeback() {
                 </ul>
 
                 <h3 className="text-lg font-medium mt-6 mb-3">3. Addressing Child Sexual Abuse Material (CSAM)</h3>
-                <p>Likeback's design inherently prevents the sharing of any content, including CSAM:</p>
+                <p>LikeBack's design inherently prevents the sharing of any content, including CSAM:</p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>
                     <strong>No content sharing:</strong> Our app does not allow users to upload, share, or exchange
@@ -162,7 +162,7 @@ export default function ChildSafetyLikeback() {
                 </ul>
 
                 <h3 className="text-lg font-medium mt-6 mb-3">4. Compliance with Child Safety Laws</h3>
-                <p>Likeback is designed to comply with all applicable child safety laws and regulations:</p>
+                <p>LikeBack is designed to comply with all applicable child safety laws and regulations:</p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>We enforce strict age verification through phone number verification</li>
                   <li>We maintain records in accordance with legal requirements</li>
@@ -195,7 +195,7 @@ export default function ChildSafetyLikeback() {
 
                 <h2 className="text-xl font-semibold mt-8 mb-4">Our Commitment</h2>
                 <p>
-                  While Likeback's minimal functionality approach inherently prevents many of the risks associated with
+                  While LikeBack's minimal functionality approach inherently prevents many of the risks associated with
                   traditional social and dating apps, we remain vigilant and committed to maintaining the highest
                   standards of safety. We regularly review our systems and processes to ensure they remain effective in
                   preventing any potential misuse of our platform.
