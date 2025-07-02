@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Shield, MessageSquare, CheckCircle, Users, Heart, Lock, Trash2 } from "lucide-react"
 
-export default function LinkPage() {
-  // Link App Store and Google Play URLs
-  const linkApp = {
+export default function LikebackPage() {
+  // Likeback App Store and Google Play URLs
+  const likebackApp = {
     appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
     googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
@@ -22,26 +22,35 @@ export default function LinkPage() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
               <div className="flex-1 text-center md:text-left">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 mb-4">
-                  Link
+                  Likeback
                 </h1>
                 <p className="text-pink-200 text-xl mb-6">
                   Dating through trusted connections. Discover meaningful relationships through mutual friends.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <StoreBadge store="app-store" href={linkApp.appStore} />
-                  <StoreBadge store="google-play" href={linkApp.googlePlay} />
+                  <StoreBadge store="app-store" href={likebackApp.appStore} />
+                  <StoreBadge store="google-play" href={likebackApp.googlePlay} />
                   <Link href="/link/support">
-                    <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
+                    <Button
+                      variant="outline"
+                      className="border-pink-400 text-pink-400 hover:bg-pink-400/10 bg-transparent"
+                    >
                       <MessageSquare className="mr-2 h-4 w-4 text-gray-600" /> Support
                     </Button>
                   </Link>
                   <Link href="/link/privacy">
-                    <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
+                    <Button
+                      variant="outline"
+                      className="border-pink-400 text-pink-400 hover:bg-pink-400/10 bg-transparent"
+                    >
                       <Shield className="mr-2 h-4 w-4 text-gray-600" /> Privacy Policy
                     </Button>
                   </Link>
                   <Link href="/link/terms">
-                    <Button variant="outline" className="border-pink-400 text-pink-400 hover:bg-pink-400/10">
+                    <Button
+                      variant="outline"
+                      className="border-pink-400 text-pink-400 hover:bg-pink-400/10 bg-transparent"
+                    >
                       <Shield className="mr-2 h-4 w-4 text-gray-600" /> Terms of Service
                     </Button>
                   </Link>
@@ -140,8 +149,8 @@ export default function LinkPage() {
               </div>
             </div>
             <div className="flex justify-center gap-4 mt-12">
-              <StoreBadge store="app-store" href={linkApp.appStore} />
-              <StoreBadge store="google-play" href={linkApp.googlePlay} />
+              <StoreBadge store="app-store" href={likebackApp.appStore} />
+              <StoreBadge store="google-play" href={likebackApp.googlePlay} />
             </div>
           </div>
         </section>
@@ -153,10 +162,10 @@ export default function LinkPage() {
                 Trust Your Dating Journey
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                "Link has transformed how I approach online dating. The double opt-in system made me feel respected, and
-                knowing that my personal information is secure gave me the confidence to be myself."
+                "Likeback has transformed how I approach online dating. The double opt-in system made me feel respected,
+                and knowing that my personal information is secure gave me the confidence to be myself."
               </p>
-              <p className="text-pink-400 font-medium">— Sarah T., Link User</p>
+              <p className="text-pink-400 font-medium">— Sarah T., Likeback User</p>
             </div>
           </div>
         </section>

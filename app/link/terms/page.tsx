@@ -4,7 +4,7 @@ import { AppIcon } from "@/components/app-icon"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
-export default function TermsOfServiceLink() {
+export default function TermsOfServiceLikeback() {
   return (
     <div className="flex flex-col min-h-screen">
       <SiteHeader />
@@ -12,13 +12,13 @@ export default function TermsOfServiceLink() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
             <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Link
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Likeback
             </Link>
 
             <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
               <div className="flex items-center mb-6">
                 <AppIcon app="link" size="md" className="mr-4" />
-                <h1 className="text-3xl font-bold">Link Terms of Service</h1>
+                <h1 className="text-3xl font-bold">Likeback Terms of Service</h1>
               </div>
 
               <div className="prose prose-invert max-w-none">
@@ -26,9 +26,10 @@ export default function TermsOfServiceLink() {
 
                 <h2 className="text-xl font-semibold mt-6 mb-4">1. ACCEPTANCE OF TERMS</h2>
                 <p>
-                  Welcome to Link. These Terms of Service ("Terms") govern your use of the Link mobile application (the
-                  "App") operated by Fontaine Labs LLC ("we," "us," or "our"). By accessing or using the App, you agree
-                  to be bound by these Terms. If you disagree with any part of the Terms, you may not access the App.
+                  Welcome to Likeback. These Terms of Service ("Terms") govern your use of the Likeback mobile
+                  application (the "App") operated by Fontaine Labs LLC ("we," "us," or "our"). By accessing or using
+                  the App, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not
+                  access the App.
                 </p>
 
                 <h2 className="text-xl font-semibold mt-6 mb-4">2. ELIGIBILITY</h2>
@@ -48,8 +49,8 @@ export default function TermsOfServiceLink() {
 
                 <h2 className="text-xl font-semibold mt-6 mb-4">4. DOUBLE OPT-IN PROCESS</h2>
                 <p>
-                  Link operates on a double opt-in basis, meaning that both parties must express interest in each other
-                  before a connection is made. You understand and agree that:
+                  Likeback operates on a double opt-in basis, meaning that both parties must express interest in each
+                  other before a connection is made. You understand and agree that:
                 </p>
                 <ul className="list-disc pl-6 my-4 space-y-2">
                   <li>

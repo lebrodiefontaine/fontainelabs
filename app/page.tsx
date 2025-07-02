@@ -20,8 +20,8 @@ export default function Home() {
     googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
   }
 
-  // Link App Store and Google Play URLs
-  const linkApp = {
+  // Likeback App Store and Google Play URLs
+  const likebackApp = {
     appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
     googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
@@ -146,17 +146,17 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Link Card */}
+              {/* Likeback Card */}
               <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
                 {/* Make the entire card clickable with an overlay link */}
                 <Link href="/link" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Link details</span>
+                  <span className="sr-only">View Likeback details</span>
                 </Link>
 
                 <div className="h-48 bg-black flex items-center justify-center p-6">
                   <div className="flex flex-col items-center">
                     <AppIcon app="link" size="lg" className="mb-4" />
-                    <h3 className="text-3xl font-bold text-white">Link</h3>
+                    <h3 className="text-3xl font-bold text-white">Likeback</h3>
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
@@ -185,8 +185,8 @@ export default function Home() {
                       className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <StoreBadge store="app-store" href={linkApp.appStore} />
-                      <StoreBadge store="google-play" href={linkApp.googlePlay} />
+                      <StoreBadge store="app-store" href={likebackApp.appStore} />
+                      <StoreBadge store="google-play" href={likebackApp.googlePlay} />
                     </div>
                   </div>
                 </div>
@@ -248,17 +248,17 @@ export default function Home() {
 
               <div className="flex flex-col items-center text-center relative group">
                 <Link href="/link" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Link details</span>
+                  <span className="sr-only">View Likeback details</span>
                 </Link>
                 <AppIcon app="link" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-3">Link</h3>
+                <h3 className="text-2xl font-bold mb-3">Likeback</h3>
                 <p className="text-muted-foreground mb-6">
                   Connect with potential partners through mutual friends. Build meaningful relationships based on
                   trusted social connections.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 relative z-20" onClick={(e) => e.stopPropagation()}>
-                  <StoreBadge store="app-store" href={linkApp.appStore} />
-                  <StoreBadge store="google-play" href={linkApp.googlePlay} />
+                  <StoreBadge store="app-store" href={likebackApp.appStore} />
+                  <StoreBadge store="google-play" href={likebackApp.googlePlay} />
                 </div>
               </div>
             </div>

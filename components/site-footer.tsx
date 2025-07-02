@@ -26,7 +26,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/link" className="text-muted-foreground hover:text-primary transition-colors">
-                  Link
+                  Likeback
                 </Link>
               </li>
             </ul>
@@ -46,7 +46,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/link/support" className="text-muted-foreground hover:text-primary transition-colors">
-                  Link Support
+                  Likeback Support
                 </Link>
               </li>
             </ul>

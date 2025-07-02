@@ -29,7 +29,7 @@ export function SiteHeader() {
             UniChance
           </Link>
           <Link className="text-sm font-medium hover:text-primary transition-colors" href="/link">
-            Link
+            Likeback
           </Link>
           <Link className="text-sm font-medium hover:text-primary transition-colors" href="/#about">
             About
@@ -80,7 +80,7 @@ export function SiteHeader() {
               href="/link"
               onClick={() => setIsMenuOpen(false)}
             >
-              Link
+              Likeback
             </Link>
             <Link
               className="text-sm font-medium hover:text-primary transition-colors"
