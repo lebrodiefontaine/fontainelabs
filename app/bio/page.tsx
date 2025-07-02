@@ -3,8 +3,8 @@ import { StoreBadge } from "@/components/store-badge"
 import Script from "next/script"
 
 export default function BioPage() {
-  // LikeBack App Store and Google Play URLs
-  const likeBackApp = {
+  // Link App Store and Google Play URLs
+  const linkApp = {
     appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
     googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
@@ -39,17 +39,17 @@ export default function BioPage() {
             <div className="flex justify-center mb-4">
               <AppIcon app="link" size="xl" className="w-24 h-24" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">LikeBack</h1>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Link</h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg">Match with anyone.</p>
           </div>
 
           {/* Download Buttons */}
           <div className="space-y-4">
             <div className="w-full flex justify-center">
-              <StoreBadge store="app-store" href={likeBackApp.appStore} className="w-full max-w-[200px]" />
+              <StoreBadge store="app-store" href={linkApp.appStore} className="w-full max-w-[200px]" />
             </div>
             <div className="w-full flex justify-center">
-              <StoreBadge store="google-play" href={likeBackApp.googlePlay} className="w-full max-w-[200px]" />
+              <StoreBadge store="google-play" href={linkApp.googlePlay} className="w-full max-w-[200px]" />
             </div>
           </div>
         </div>

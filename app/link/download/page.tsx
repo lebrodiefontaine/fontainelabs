@@ -5,8 +5,8 @@ import Link from "next/link"
 import Script from "next/script"
 
 export default function LinkDownloadPage() {
-  // LikeBack App Store and Google Play URLs
-  const likeBackApp = {
+  // Link App Store and Google Play URLs
+  const linkApp = {
     appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
     googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
@@ -42,7 +42,7 @@ export default function LinkDownloadPage() {
             className="inline-flex items-center text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to LikeBack
+            Back to Link
           </Link>
         </div>
 
@@ -54,17 +54,17 @@ export default function LinkDownloadPage() {
               <div className="flex justify-center mb-6">
                 <AppIcon app="link" size="xl" className="w-32 h-32" />
               </div>
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">LikeBack</h1>
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">Link</h1>
               <p className="text-gray-600 dark:text-gray-300 text-xl">Match with anyone.</p>
             </div>
 
             {/* Download Buttons */}
             <div className="space-y-4">
               <div className="w-full">
-                <StoreBadge store="app-store" href={likeBackApp.appStore} className="w-full" />
+                <StoreBadge store="app-store" href={linkApp.appStore} className="w-full" />
               </div>
               <div className="w-full">
-                <StoreBadge store="google-play" href={likeBackApp.googlePlay} className="w-full" />
+                <StoreBadge store="google-play" href={linkApp.googlePlay} className="w-full" />
               </div>
             </div>
           </div>

@@ -20,8 +20,8 @@ export default function Home() {
     googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
   }
 
-  // LikeBack App Store and Google Play URLs
-  const likeBackApp = {
+  // Link App Store and Google Play URLs
+  const linkApp = {
     appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
     googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
@@ -156,7 +156,7 @@ export default function Home() {
                 <div className="h-48 bg-black flex items-center justify-center p-6">
                   <div className="flex flex-col items-center">
                     <AppIcon app="link" size="lg" className="mb-4" />
-                    <h3 className="text-3xl font-bold text-white">LikeBack</h3>
+                    <h3 className="text-3xl font-bold text-white">Link</h3>
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
@@ -185,8 +185,8 @@ export default function Home() {
                       className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <StoreBadge store="app-store" href={likeBackApp.appStore} />
-                      <StoreBadge store="google-play" href={likeBackApp.googlePlay} />
+                      <StoreBadge store="app-store" href={linkApp.appStore} />
+                      <StoreBadge store="google-play" href={linkApp.googlePlay} />
                     </div>
                   </div>
                 </div>
@@ -251,14 +251,14 @@ export default function Home() {
                   <span className="sr-only">View Link details</span>
                 </Link>
                 <AppIcon app="link" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-3">LikeBack</h3>
+                <h3 className="text-2xl font-bold mb-3">Link</h3>
                 <p className="text-muted-foreground mb-6">
                   Connect with potential partners through mutual friends. Build meaningful relationships based on
                   trusted social connections.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 relative z-20" onClick={(e) => e.stopPropagation()}>
-                  <StoreBadge store="app-store" href={likeBackApp.appStore} />
-                  <StoreBadge store="google-play" href={likeBackApp.googlePlay} />
+                  <StoreBadge store="app-store" href={linkApp.appStore} />
+                  <StoreBadge store="google-play" href={linkApp.googlePlay} />
                 </div>
               </div>
             </div>

@@ -61,13 +61,13 @@ export default function DeleteAccountLink() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-md mx-auto">
             <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
-              <ArrowLeft className="mr-2 h-4 w-4 text-gray-600" /> Back to LikeBack
+              <ArrowLeft className="mr-2 h-4 w-4 text-gray-600" /> Back to Link
             </Link>
 
             <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
               <div className="flex items-center mb-6">
                 <AppIcon app="link" size="md" className="mr-4" />
-                <h1 className="text-2xl font-bold">Delete Your LikeBack Account</h1>
+                <h1 className="text-2xl font-bold">Delete Your Link Account</h1>
               </div>
 
               {!isSubmitted ? (
@@ -97,7 +97,7 @@ export default function DeleteAccountLink() {
                         className="bg-background"
                       />
                       <p className="text-xs text-muted-foreground">
-                        Enter the phone number associated with your LikeBack account
+                        Enter the phone number associated with your Link account
                       </p>
                     </div>
 
@@ -113,7 +113,7 @@ export default function DeleteAccountLink() {
                         className="bg-background"
                       />
                       <p className="text-xs text-muted-foreground">
-                        Enter your full name exactly as it appears in your LikeBack account
+                        Enter your full name exactly as it appears in your Link account
                       </p>
                     </div>
 
