@@ -1,129 +1,208 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft, Mail, MessageCircle, Book } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
+import { AppIcon } from "@/components/app-icon"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
-export default function Support() {
+export default function SupportLink() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <div className="mb-8">
-        <Link href="/link">
-          <Button variant="ghost" className="mb-4">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Likeback
-          </Button>
-        </Link>
-        <h1 className="text-4xl font-bold mb-2">Support</h1>
-        <p className="text-muted-foreground">Get help with Likeback</p>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <SiteHeader />
+      <main className="flex-1 pt-16">
+        <div className="container mx-auto px-4 py-12">
+          <div className="max-w-3xl mx-auto">
+            <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Link
+            </Link>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-        <div className="p-6 border rounded-lg">
-          <Mail className="h-8 w-8 mb-4 text-primary" />
-          <h3 className="text-lg font-semibold mb-2">Email Support</h3>
-          <p className="text-muted-foreground mb-4">Send us an email and we'll get back to you within 24 hours.</p>
-          <Button asChild>
-            <a href="mailto:support@fontainelabs.com">Contact Support</a>
-          </Button>
-        </div>
+            <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
+              <div className="flex items-center mb-6">
+                <AppIcon app="link" size="md" className="mr-4" />
+                <h1 className="text-3xl font-bold">Link Support Center</h1>
+              </div>
 
-        <div className="p-6 border rounded-lg">
-          <MessageCircle className="h-8 w-8 mb-4 text-primary" />
-          <h3 className="text-lg font-semibold mb-2">In-App Help</h3>
-          <p className="text-muted-foreground mb-4">
-            Access help articles and tutorials directly within the Likeback app.
-          </p>
-          <Button variant="outline">Open App</Button>
-        </div>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-lg mb-6">
+                  Welcome to the Link support center. We're here to help you make meaningful connections through our
+                  double opt-in dating app. This guide will help you get the most out of your Link experience.
+                </p>
 
-        <div className="p-6 border rounded-lg">
-          <Book className="h-8 w-8 mb-4 text-primary" />
-          <h3 className="text-lg font-semibold mb-2">FAQ</h3>
-          <p className="text-muted-foreground mb-4">Find answers to commonly asked questions about Likeback.</p>
-          <Button variant="outline">View FAQ</Button>
-        </div>
-      </div>
+                <h2 className="text-xl font-semibold mt-6 mb-4">Getting Started</h2>
+                <h3 className="text-lg font-medium mt-4 mb-2">Creating Your Profile</h3>
+                <ol className="list-decimal pl-6 my-4 space-y-2">
+                  <li>Download and open the Link app</li>
+                  <li>Enter your phone number to receive a verification code</li>
+                  <li>Enter the verification code to confirm your identity</li>
+                  <li>Add your name and profile photos</li>
+                  <li>Set your preferences for potential matches</li>
+                  <li>Start discovering potential connections</li>
+                </ol>
 
-      <div className="prose prose-gray dark:prose-invert max-w-none">
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+                <h3 className="text-lg font-medium mt-4 mb-2">Understanding Double Opt-In</h3>
+                <p>Link uses a double opt-in system to ensure respectful and mutual connections:</p>
+                <ol className="list-decimal pl-6 my-4 space-y-2">
+                  <li>When you express interest in someone, they won't be notified</li>
+                  <li>If they also express interest in you, both of you will be notified of the match</li>
+                  <li>Only after a mutual match can you begin messaging each other</li>
+                  <li>This ensures that all connections are wanted by both parties</li>
+                </ol>
 
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold mb-2">How do I create an account on Likeback?</h3>
-              <p className="text-muted-foreground">
-                Download the Likeback app from the App Store or Google Play Store, then tap "Sign Up" and follow the
-                prompts to create your account using your email address or phone number.
-              </p>
-            </div>
+                <h3 className="text-lg font-medium mt-4 mb-2">Tips for the Best Results</h3>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>Upload clear, recent photos that show your face</li>
+                  <li>Complete all profile sections to improve match quality</li>
+                  <li>Be specific about your interests to find more compatible matches</li>
+                  <li>Regularly check the app for new potential connections</li>
+                  <li>Respond to messages promptly to keep conversations flowing</li>
+                </ul>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">How do I reset my password?</h3>
-              <p className="text-muted-foreground">
-                On the login screen, tap "Forgot Password?" and enter your email address. We'll send you a link to reset
-                your password.
-              </p>
-            </div>
+                <h2 className="text-xl font-semibold mt-6 mb-4">Frequently Asked Questions</h2>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">How do I delete my Likeback account?</h3>
-              <p className="text-muted-foreground">
-                Go to Settings &gt; Account &gt; Delete Account in the Likeback app. Please note that this action is
-                permanent and cannot be undone.
-              </p>
-            </div>
+                <div className="space-y-4">
+                  <div className="border border-border rounded-lg p-4">
+                    <h3 className="font-medium">What information does Link store about me?</h3>
+                    <p className="text-muted-foreground mt-2">
+                      Link only stores your name and phone number in our secure database. We prioritize your privacy and
+                      only collect the minimum information necessary to provide our service. Your phone number is used
+                      for account verification and security.
+                    </p>
+                  </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">How do I report inappropriate content or behavior?</h3>
-              <p className="text-muted-foreground">
-                Tap the three dots menu on any post or profile, then select "Report." Choose the appropriate reason and
-                provide additional details if necessary.
-              </p>
-            </div>
+                  <div className="border border-border rounded-lg p-4">
+                    <h3 className="font-medium">How does the double opt-in system work?</h3>
+                    <p className="text-muted-foreground mt-2">
+                      Our double opt-in system means that both users must express interest in each other before a match
+                      is made. When you like someone's profile, they won't be notified unless they also like your
+                      profile. This creates a more respectful environment where all connections are mutual.
+                    </p>
+                  </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">How do I change my privacy settings?</h3>
-              <p className="text-muted-foreground">
-                Go to Settings &gt; Privacy in the Likeback app to control who can see your posts, send you messages,
-                and find your profile.
-              </p>
-            </div>
+                  <div className="border border-border rounded-lg p-4">
+                    <h3 className="font-medium">Is my phone number visible to other users?</h3>
+                    <p className="text-muted-foreground mt-2">
+                      No, your phone number is never visible to other users. We use your phone number only for account
+                      verification and to prevent fake accounts. All communication between matches happens within the
+                      app.
+                    </p>
+                  </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Why isn't Likeback working properly?</h3>
-              <p className="text-muted-foreground">
-                Try closing and reopening the app, checking your internet connection, or updating to the latest version
-                of Likeback. If problems persist, contact our support team.
-              </p>
+                  <div className="border border-border rounded-lg p-4">
+                    <h3 className="font-medium">How do I know if someone is interested in me?</h3>
+                    <p className="text-muted-foreground mt-2">
+                      You'll only be notified when there's mutual interest. If you express interest in someone and they
+                      later express interest in you, both of you will receive a match notification. You won't see who's
+                      interested in you unless you're also interested in them.
+                    </p>
+                  </div>
+
+                  <div className="border border-border rounded-lg p-4">
+                    <h3 className="font-medium">How do I delete my account?</h3>
+                    <p className="text-muted-foreground mt-2">
+                      You can delete your account and all associated data by using our{" "}
+                      <Link href="/link/deleteaccount" className="text-primary hover:text-pink-400">
+                        account deletion form
+                      </Link>
+                      . You'll need to provide your phone number and name for verification. Once submitted, your account
+                      will be permanently deleted within 30 days.
+                    </p>
+                  </div>
+                </div>
+
+                <h2 className="text-xl font-semibold mt-8 mb-4">Troubleshooting</h2>
+
+                <h3 className="text-lg font-medium mt-4 mb-2">Phone Verification Issues</h3>
+                <p>If you're having trouble with phone verification:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>Ensure you've entered the correct phone number with country code</li>
+                  <li>Check that you have a stable internet connection</li>
+                  <li>Wait a few minutes and try again if you don't receive the code</li>
+                  <li>Make sure your phone can receive SMS messages</li>
+                  <li>Contact support if problems persist</li>
+                </ul>
+
+                <h3 className="text-lg font-medium mt-4 mb-2">Not Finding Matches</h3>
+                <p>If you're not seeing many potential matches:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>Adjust your distance settings to include a wider geographic area</li>
+                  <li>Review your preference filters to ensure they're not too restrictive</li>
+                  <li>Complete your profile with more information to improve visibility</li>
+                  <li>Add more high-quality photos</li>
+                  <li>Check back regularly as new users join the platform</li>
+                </ul>
+
+                <h3 className="text-lg font-medium mt-4 mb-2">App Performance Issues</h3>
+                <p>If you're experiencing technical problems:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>Ensure you're using the latest version of the app</li>
+                  <li>Restart the app</li>
+                  <li>Check your internet connection</li>
+                  <li>Restart your device</li>
+                  <li>Clear the app cache in your device settings</li>
+                </ul>
+
+                <h2 className="text-xl font-semibold mt-8 mb-4">Safety and Privacy</h2>
+                <p>At Link, your safety and privacy are our priorities:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>We only store your name and phone number in our secure database</li>
+                  <li>Your phone number is never visible to other users</li>
+                  <li>All profiles are verified through phone verification to prevent fake accounts</li>
+                  <li>Our double opt-in system ensures all connections are mutual and wanted</li>
+                  <li>Use our in-app reporting feature to flag inappropriate behavior</li>
+                  <li>
+                    Remember to follow standard dating safety practices like meeting in public places for the first time
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-semibold mt-8 mb-4">Account Management</h2>
+                <p>Managing your Link account:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>
+                    <strong>Update Profile:</strong> You can update your profile information and photos at any time
+                    through the app's Profile section.
+                  </li>
+                  <li>
+                    <strong>Privacy Settings:</strong> Adjust your privacy settings in the app to control who can see
+                    your profile and how you receive notifications.
+                  </li>
+                  <li>
+                    <strong>Pause Account:</strong> If you need a break, you can temporarily pause your account without
+                    losing your matches or conversations.
+                  </li>
+                  <li>
+                    <strong>Delete Account:</strong> If you wish to permanently delete your account and all associated
+                    data, use our{" "}
+                    <Link href="/link/deleteaccount" className="text-primary hover:text-pink-400">
+                      account deletion form
+                    </Link>
+                    .
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-semibold mt-8 mb-4">Contact Support</h2>
+                <p>Our support team is here to help with any questions or concerns:</p>
+                <p className="mt-2">
+                  Email: founder@fontainelabs.com
+                  <br />
+                  In-app: Tap on Profile → Settings → Help & Support → Contact Us
+                </p>
+                <p className="mt-4">When contacting support, please include:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>Your phone number (for account identification)</li>
+                  <li>The device and operating system you're using</li>
+                  <li>A detailed description of the issue</li>
+                  <li>Screenshots of any error messages (if applicable)</li>
+                </ul>
+
+                <p className="mt-6">
+                  Thank you for choosing Link. We're committed to helping you build meaningful connections through our
+                  secure, double opt-in dating platform.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
-          <p className="mb-4">
-            If you need additional help or have questions not covered in our FAQ, please don't hesitate to reach out:
-          </p>
-          <div className="bg-muted p-4 rounded-lg">
-            <p className="mb-2">
-              <strong>Email:</strong> support@fontainelabs.com
-            </p>
-            <p className="mb-2">
-              <strong>Response Time:</strong> Within 24 hours
-            </p>
-            <p className="mb-2">
-              <strong>Business Hours:</strong> Monday - Friday, 9 AM - 6 PM EST
-            </p>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Feedback</h2>
-          <p className="mb-4">
-            We're always looking to improve Likeback. If you have suggestions, feature requests, or general feedback,
-            we'd love to hear from you at feedback@fontainelabs.com.
-          </p>
-        </section>
-      </div>
+        </div>
+      </main>
+      <SiteFooter />
     </div>
   )
 }

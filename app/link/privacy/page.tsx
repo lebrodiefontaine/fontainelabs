@@ -1,134 +1,168 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
+import { AppIcon } from "@/components/app-icon"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyLink() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <div className="mb-8">
-        <Link href="/link">
-          <Button variant="ghost" className="mb-4">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Likeback
-          </Button>
-        </Link>
-        <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
-        <p className="text-muted-foreground">Last updated: December 2023</p>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <SiteHeader />
+      <main className="flex-1 pt-16">
+        <div className="container mx-auto px-4 py-12">
+          <div className="max-w-3xl mx-auto">
+            <Link href="/link" className="inline-flex items-center text-primary hover:text-pink-400 mb-6">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Link
+            </Link>
 
-      <div className="prose prose-gray dark:prose-invert max-w-none">
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
-          <p className="mb-4">
-            Fontaine Labs LLC ("we," "our," or "us") operates the Likeback mobile application ("the App"). This Privacy
-            Policy explains how we collect, use, disclose, and safeguard your information when you use our App.
-          </p>
-        </section>
+            <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
+              <div className="flex items-center mb-6">
+                <AppIcon app="link" size="md" className="mr-4" />
+                <h1 className="text-3xl font-bold">Link Privacy Policy</h1>
+              </div>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-sm text-muted-foreground">Last Updated: May 9, 2025</p>
 
-          <h3 className="text-xl font-semibold mb-3">Personal Information</h3>
-          <p className="mb-4">When you create an account on Likeback, we may collect:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Name and username</li>
-            <li>Email address</li>
-            <li>Phone number (optional)</li>
-            <li>Profile picture</li>
-            <li>Date of birth</li>
-          </ul>
+                <h2 className="text-xl font-semibold mt-6 mb-4">1. INTRODUCTION</h2>
+                <p>
+                  At Fontaine Labs LLC ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy
+                  Policy explains how we collect, use, and safeguard your information when you use our Link mobile
+                  application (the "App").
+                </p>
 
-          <h3 className="text-xl font-semibold mb-3">Usage Information</h3>
-          <p className="mb-4">We automatically collect information about how you use Likeback:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>App usage patterns and preferences</li>
-            <li>Device information (model, operating system, unique identifiers)</li>
-            <li>Log data (IP address, access times, pages viewed)</li>
-            <li>Location data (if you grant permission)</li>
-          </ul>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">2. INFORMATION WE COLLECT</h2>
+                <p>
+                  We collect minimal personal information to provide our service. Specifically, we only collect and
+                  store:
+                </p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>Your name</li>
+                  <li>Your phone number</li>
+                </ul>
+                <p>
+                  This information is necessary to create your account, verify your identity, and enable the core
+                  functionality of our double opt-in dating service.
+                </p>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
-          <p className="mb-4">We use the collected information to:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Provide and maintain Likeback services</li>
-            <li>Personalize your experience</li>
-            <li>Communicate with you about the App</li>
-            <li>Improve our services and develop new features</li>
-            <li>Ensure security and prevent fraud</li>
-            <li>Comply with legal obligations</li>
-          </ul>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">3. HOW WE USE YOUR INFORMATION</h2>
+                <p>We use the information we collect for the following purposes:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>To create and maintain your account</li>
+                  <li>To verify your identity and prevent fraud</li>
+                  <li>To enable the double opt-in matching process</li>
+                  <li>To notify you of potential matches</li>
+                  <li>To provide customer support</li>
+                  <li>To send important service announcements and updates</li>
+                </ul>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">4. Information Sharing</h2>
-          <p className="mb-4">
-            We do not sell your personal information. We may share your information in the following circumstances:
-          </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>With other Likeback users as part of the social features</li>
-            <li>With service providers who help us operate the App</li>
-            <li>When required by law or to protect our rights</li>
-            <li>In connection with a business transfer or merger</li>
-          </ul>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">4. DATA SECURITY</h2>
+                <p>
+                  We take the security of your data seriously. Your personal information is stored in a secure database
+                  with industry-standard encryption and protection measures. We implement appropriate technical and
+                  organizational measures to protect against unauthorized access, alteration, disclosure, or destruction
+                  of your personal data.
+                </p>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">5. Data Security</h2>
-          <p className="mb-4">
-            We implement appropriate security measures to protect your information against unauthorized access,
-            alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
-          </p>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">5. DATA RETENTION</h2>
+                <p>
+                  We retain your personal information only for as long as necessary to fulfill the purposes outlined in
+                  this Privacy Policy, unless a longer retention period is required or permitted by law. When you delete
+                  your account, we will delete or anonymize your personal information within a reasonable timeframe.
+                </p>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">6. Your Rights and Choices</h2>
-          <p className="mb-4">You have the right to:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Access and update your personal information</li>
-            <li>Delete your account and associated data</li>
-            <li>Control privacy settings within the App</li>
-            <li>Opt out of certain communications</li>
-            <li>Request a copy of your data</li>
-          </ul>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">6. INFORMATION SHARING</h2>
+                <p>
+                  We do not sell, trade, or otherwise transfer your personal information to third parties. We may share
+                  your information in the following limited circumstances:
+                </p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>
+                    <strong>Service Providers:</strong> We may share your information with trusted third-party service
+                    providers who assist us in operating our app, conducting our business, or servicing you. These
+                    providers have access to your personal information only to perform specific tasks on our behalf and
+                    are obligated to protect your information.
+                  </li>
+                  <li>
+                    <strong>Legal Requirements:</strong> We may disclose your information when required by law,
+                    subpoena, or other legal process, or if we have a good faith belief that disclosure is necessary to
+                    protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a
+                    government request.
+                  </li>
+                  <li>
+                    <strong>Business Transfers:</strong> If we are involved in a merger, acquisition, or sale of all or
+                    a portion of our assets, your information may be transferred as part of that transaction. We will
+                    notify you via email and/or a prominent notice on our App of any change in ownership or uses of your
+                    personal information.
+                  </li>
+                </ul>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">7. Children's Privacy</h2>
-          <p className="mb-4">
-            Likeback is not intended for children under 13 years of age. We do not knowingly collect personal
-            information from children under 13. If we become aware that we have collected such information, we will take
-            steps to delete it.
-          </p>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">7. YOUR RIGHTS</h2>
+                <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>The right to access the personal information we have about you</li>
+                  <li>The right to request correction of inaccurate personal information</li>
+                  <li>The right to request deletion of your personal information</li>
+                  <li>The right to object to processing of your personal information</li>
+                  <li>The right to data portability</li>
+                </ul>
+                <p>
+                  To exercise any of these rights, please contact us using the information provided in the "Contact Us"
+                  section below.
+                </p>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">8. International Data Transfers</h2>
-          <p className="mb-4">
-            Your information may be transferred to and processed in countries other than your own. We ensure appropriate
-            safeguards are in place to protect your information during such transfers.
-          </p>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">8. ACCOUNT DELETION</h2>
+                <p>
+                  You have the right to delete your account and personal information from our systems. To request
+                  account deletion, you can:
+                </p>
+                <ul className="list-disc pl-6 my-4 space-y-2">
+                  <li>
+                    Use our{" "}
+                    <Link href="/link/deleteaccount" className="text-primary hover:text-pink-400">
+                      account deletion form
+                    </Link>
+                  </li>
+                  <li>Contact us directly at founder@fontainelabs.com</li>
+                  <li>Use the in-app deletion option in your account settings</li>
+                </ul>
+                <p>
+                  Upon receiving your request, we will verify your identity and process your account deletion within 30
+                  days. After deletion, your personal information will be permanently removed from our active systems,
+                  though some information may remain in our backup systems for a limited time in accordance with
+                  applicable laws.
+                </p>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">9. Changes to This Policy</h2>
-          <p className="mb-4">
-            We may update this Privacy Policy from time to time. We will notify you of any material changes by posting
-            the new policy on this page and updating the "Last updated" date.
-          </p>
-        </section>
+                <h2 className="text-xl font-semibold mt-6 mb-4">9. CHILDREN'S PRIVACY</h2>
+                <p>
+                  Our App is not intended for individuals under the age of 18. We do not knowingly collect personal
+                  information from children under 18. If you are a parent or guardian and believe your child has
+                  provided us with personal information, please contact us, and we will take steps to delete such
+                  information.
+                </p>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">10. Contact Us</h2>
-          <p className="mb-4">
-            If you have questions about this Privacy Policy or our data practices, please contact us at:
-          </p>
-          <p className="mb-2">Fontaine Labs LLC</p>
-          <p className="mb-2">Email: privacy@fontainelabs.com</p>
-          <p className="mb-2">Address: [Your Business Address]</p>
-        </section>
-      </div>
+                <h2 className="text-xl font-semibold mt-6 mb-4">10. CHANGES TO THIS PRIVACY POLICY</h2>
+                <p>
+                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the
+                  new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this
+                  Privacy Policy periodically for any changes.
+                </p>
+
+                <h2 className="text-xl font-semibold mt-6 mb-4">11. CONTACT US</h2>
+                <p>
+                  If you have any questions about this Privacy Policy, please contact us at:
+                  <br />
+                  <br />
+                  Email: founder@fontainelabs.com
+                  <br />
+                  Website: www.fontainelabs.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <SiteFooter />
     </div>
   )
 }
