@@ -26,6 +26,11 @@ export default function Home() {
     googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
 
+  // Delta App Store URL (placeholder)
+  const deltaApp = {
+    appStore: "#", // Placeholder - replace with actual App Store URL when available
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <SiteHeader />
@@ -57,7 +62,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">Our Apps</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               {/* Aura Pro Card */}
               <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
                 {/* Make the entire card clickable with an overlay link */}
@@ -191,6 +196,47 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* Delta Card */}
+              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
+                {/* Make the entire card clickable with an overlay link */}
+                <Link href="/delta" className="absolute inset-0 z-10">
+                  <span className="sr-only">View Delta details</span>
+                </Link>
+
+                <div className="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-6">
+                  <div className="flex flex-col items-center">
+                    <AppIcon app="aura-pro" size="lg" className="mb-4" />
+                    <h3 className="text-3xl font-bold text-white">Delta</h3>
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-card-foreground mb-4">
+                    Track your habits and build better routines with our intuitive habit tracking app. Visualize your progress and stay motivated.
+                  </p>
+                  <div className="mt-auto space-y-3">
+                    <Link
+                      href="/delta/support"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
+                    </Link>
+                    <Link
+                      href="/delta/privacy"
+                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
+                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
+                    </Link>
+                    <div className="mt-4 flex justify-center relative z-20" onClick={(e) => e.stopPropagation()}>
+                      <StoreBadge store="app-store" href={deltaApp.appStore} />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -214,20 +260,15 @@ export default function Home() {
               Download Our Apps
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
               <div className="flex flex-col items-center text-center relative group">
                 <Link href="/aura-pro" className="absolute inset-0 z-10">
                   <span className="sr-only">View Aura Pro details</span>
                 </Link>
                 <AppIcon app="aura-pro" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-3">Aura Pro</h3>
-                <p className="text-muted-foreground mb-6">
-                  Reveal your unique aura signature with our advanced facial analysis technology. Discover insights
-                  about your energy and spiritual alignment.
-                </p>
-                <div className="flex justify-center relative z-20" onClick={(e) => e.stopPropagation()}>
-                  <StoreBadge store="app-store" href={auraPro.appStore} />
-                </div>
+                <h3 className="text-2xl font-bold mb-2">Aura Pro</h3>
+                <p className="text-muted-foreground mb-4">Elite Aura Analysis</p>
+                <StoreBadge store="app-store" href={auraPro.appStore} className="relative z-20" />
               </div>
 
               <div className="flex flex-col items-center text-center relative group">
@@ -235,14 +276,11 @@ export default function Home() {
                   <span className="sr-only">View UniChance details</span>
                 </Link>
                 <AppIcon app="uni-chance" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-3">UniChance</h3>
-                <p className="text-muted-foreground mb-6">
-                  Navigate the college admissions process with confidence using our comprehensive education platform
-                  with AI-powered insights.
-                </p>
-                <div className="flex flex-wrap justify-center gap-2 relative z-20" onClick={(e) => e.stopPropagation()}>
-                  <StoreBadge store="app-store" href={uniChance.appStore} />
-                  <StoreBadge store="google-play" href={uniChance.googlePlay} />
+                <h3 className="text-2xl font-bold mb-2">UniChance</h3>
+                <p className="text-muted-foreground mb-4">Admissions Analysis</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  <StoreBadge store="app-store" href={uniChance.appStore} className="relative z-20" />
+                  <StoreBadge store="google-play" href={uniChance.googlePlay} className="relative z-20" />
                 </div>
               </div>
 
@@ -251,15 +289,22 @@ export default function Home() {
                   <span className="sr-only">View Link details</span>
                 </Link>
                 <AppIcon app="link" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-3">Link</h3>
-                <p className="text-muted-foreground mb-6">
-                  Connect with potential partners through mutual friends. Build meaningful relationships based on
-                  trusted social connections.
-                </p>
-                <div className="flex flex-wrap justify-center gap-2 relative z-20" onClick={(e) => e.stopPropagation()}>
-                  <StoreBadge store="app-store" href={linkApp.appStore} />
-                  <StoreBadge store="google-play" href={linkApp.googlePlay} />
+                <h3 className="text-2xl font-bold mb-2">Link</h3>
+                <p className="text-muted-foreground mb-4">Match with Anyone</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  <StoreBadge store="app-store" href={linkApp.appStore} className="relative z-20" />
+                  <StoreBadge store="google-play" href={linkApp.googlePlay} className="relative z-20" />
                 </div>
+              </div>
+
+              <div className="flex flex-col items-center text-center relative group">
+                <Link href="/delta" className="absolute inset-0 z-10">
+                  <span className="sr-only">View Delta details</span>
+                </Link>
+                <AppIcon app="aura-pro" size="xl" className="mb-6 cursor-pointer" />
+                <h3 className="text-2xl font-bold mb-2">Delta</h3>
+                <p className="text-muted-foreground mb-4">Habit Tracking</p>
+                <StoreBadge store="app-store" href={deltaApp.appStore} className="relative z-20" />
               </div>
             </div>
           </div>

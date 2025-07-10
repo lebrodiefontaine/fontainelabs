@@ -31,6 +31,9 @@ export function SiteHeader() {
           <Link className="text-sm font-medium hover:text-primary transition-colors" href="/link">
             Likeback
           </Link>
+          <Link className="text-sm font-medium hover:text-primary transition-colors" href="/delta">
+            Delta
+          </Link>
           <Link className="text-sm font-medium hover:text-primary transition-colors" href="/#about">
             About
           </Link>
@@ -81,6 +84,13 @@ export function SiteHeader() {
               onClick={() => setIsMenuOpen(false)}
             >
               Likeback
+            </Link>
+            <Link
+              className="text-sm font-medium hover:text-primary transition-colors"
+              href="/delta"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Delta
             </Link>
             <Link
               className="text-sm font-medium hover:text-primary transition-colors"

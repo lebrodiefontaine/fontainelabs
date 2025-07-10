@@ -29,6 +29,11 @@ export function SiteFooter() {
                   Likeback
                 </Link>
               </li>
+              <li>
+                <Link href="/delta" className="text-muted-foreground hover:text-primary transition-colors">
+                  Delta
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -49,6 +54,11 @@ export function SiteFooter() {
                   Likeback Support
                 </Link>
               </li>
+              <li>
+                <Link href="/delta/support" className="text-muted-foreground hover:text-primary transition-colors">
+                  Delta Support
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -67,6 +77,16 @@ export function SiteFooter() {
               <li>
                 <Link href="/link/child-safety" className="text-muted-foreground hover:text-primary transition-colors">
                   Child Safety Standards
+                </Link>
+              </li>
+              <li>
+                <Link href="/delta/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                  Delta Terms
+                </Link>
+              </li>
+              <li>
+                <Link href="/delta/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                  Delta Privacy
                 </Link>
               </li>
             </ul>
