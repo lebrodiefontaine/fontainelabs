@@ -40,14 +40,24 @@ export default function DeltaSupportPage() {
                     Each day you complete a habit, your streak increases. Missing a day resets the streak for that habit.
                   </li>
                   <li>
-                    <strong>Is my data synced across devices?</strong>
+                    <strong>Is my data stored in the cloud?</strong>
                     <br />
-                    If you sign in with your account, your habits and progress are securely synced across devices.
+                    No. Delta stores all your data locally on your device only. We don't collect or sync any of your information to our servers. Your data stays private and offline on your device.
                   </li>
                   <li>
-                    <strong>How do I delete my account?</strong>
+                    <strong>Is Delta completely private?</strong>
                     <br />
-                    Go to Settings &gt; Account &gt; Delete Account, or contact us at founder@fontainelabs.com.
+                    Yes! Delta doesn't collect any personal information, doesn't require an account, and doesn't sync your data anywhere. Everything stays on your device. See our <Link href="/delta/privacy" className="text-primary hover:underline">Privacy Policy</Link> for full details.
+                  </li>
+                  <li>
+                    <strong>How do I delete my account and data?</strong>
+                    <br />
+                    Go to Settings and tap "Delete My Account and Data". This will permanently erase all your habit data from your device. Since we don't store any data on our servers, this completely removes all your information.
+                  </li>
+                  <li>
+                    <strong>What if I get a new phone?</strong>
+                    <br />
+                    Since Delta stores data locally on your device, your data won't automatically transfer to a new device. This is by design to protect your privacy. You'll start fresh on your new device.
                   </li>
                 </ul>
 
