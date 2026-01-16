@@ -37,10 +37,7 @@ export function AppIcon({ app, size = "md", className }: AppIconProps) {
   const roundedStyle = "rounded-[22%]" // iOS app icon style rounded corners
 
   return (
-    <div
-      className={cn("relative overflow-hidden shadow-lg", roundedStyle, className)}
-      style={{ width: pixelSize, height: pixelSize }}
-    >
+    <div className={cn("relative overflow-hidden", roundedStyle, className)} style={{ width: pixelSize, height: pixelSize }}>
       <Image
         src={iconPath || "/placeholder.svg"}
         alt={`${app} App Icon`}

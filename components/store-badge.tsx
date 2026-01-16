@@ -8,12 +8,9 @@ interface StoreBadgeProps {
 }
 
 export function StoreBadge({ store, href, className = "" }: StoreBadgeProps) {
-  // Add a subtle hover effect to the className
-  const enhancedClassName = `${className} transform transition-all duration-200 hover:-translate-y-1 relative z-20`
-
   if (store === "app-store") {
-    return <AppStoreBadge href={href} className={enhancedClassName} />
+    return <AppStoreBadge href={href} className={className} />
   } else {
-    return <GooglePlayBadge href={href} className={enhancedClassName} />
+    return <GooglePlayBadge href={href} className={className} />
   }
 }

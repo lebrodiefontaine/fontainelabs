@@ -7,7 +7,7 @@ export default function PrivacyPolicyGorillaLawFirm() {
   return (
     <div className="flex flex-col min-h-screen">
       <SiteHeader />
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-16 legal">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <Link href="/" className="inline-flex items-center text-primary hover:text-racing-green-400 mb-6">

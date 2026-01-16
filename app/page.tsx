@@ -1,332 +1,139 @@
-"use client"
-
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Shield, MessageSquare, ChevronRight } from "lucide-react"
 import { AppIcon } from "@/components/app-icon"
 import { StoreBadge } from "@/components/store-badge"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
 export default function Home() {
-  // Aura Pro App Store URL
   const auraPro = {
     appStore: "https://apps.apple.com/us/app/aura-pro-elite-aura-analysis/id6743044971",
   }
 
-  // UniChance App Store and Google Play URLs
   const uniChance = {
     appStore: "https://apps.apple.com/us/app/unichance-admissions-analysis/id6743754137",
     googlePlay: "#", // Placeholder - replace with actual Google Play URL when available
   }
 
-  // Link App Store and Google Play URLs
   const linkApp = {
     appStore: "https://apps.apple.com/us/app/link-match-with-anyone/id6745699159",
     googlePlay: "https://play.google.com/store/apps/details?id=com.fontainelabs.link&pcampaignid=web_share",
   }
 
-  // Delta App Store URL (placeholder)
   const deltaApp = {
     appStore: "#", // Placeholder - replace with actual App Store URL when available
   }
 
+  const apps = [
+    {
+      name: "aura pro",
+      href: "/aura-pro",
+      icon: "aura-pro" as const,
+      tagline: "elite aura analysis",
+      description:
+        "discover your unique aura signature with our advanced facial analysis technology. reveal insights about your energy and spiritual alignment.",
+      supportHref: "/support-aura-pro",
+      privacyHref: "/privacy-policy-aura-pro",
+      badges: [{ store: "app-store" as const, href: auraPro.appStore }],
+    },
+    {
+      name: "unichance",
+      href: "/uni-chance",
+      icon: "uni-chance" as const,
+      tagline: "admissions analysis",
+      description:
+        "navigate the college admissions process with confidence using our ai-powered platform. calculate your chances of getting into top universities.",
+      supportHref: "/support-uni-chance",
+      privacyHref: "/privacy-policy-uni-chance",
+      badges: [
+        { store: "app-store" as const, href: uniChance.appStore },
+        { store: "google-play" as const, href: uniChance.googlePlay },
+      ],
+    },
+    {
+      name: "link",
+      href: "/link",
+      icon: "link" as const,
+      tagline: "match with anyone",
+      description:
+        "a dating app that leverages your mutual friends to create meaningful connections. find potential partners through trusted social networks.",
+      supportHref: "/support-link",
+      privacyHref: "/link/privacy",
+      badges: [
+        { store: "app-store" as const, href: linkApp.appStore },
+        { store: "google-play" as const, href: linkApp.googlePlay },
+      ],
+    },
+    {
+      name: "delta",
+      href: "/delta",
+      icon: "aura-pro" as const,
+      tagline: "habit tracking",
+      description:
+        "track your habits and build better routines with our intuitive habit tracking app. visualize your progress and stay motivated.",
+      supportHref: "/delta/support",
+      privacyHref: "/delta/privacy",
+      badges: [{ store: "app-store" as const, href: deltaApp.appStore }],
+    },
+  ]
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen">
       <SiteHeader />
-      <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-racing-green-400 to-racing-green-200">
-                  Innovative Mobile Apps for Modern Life
-                </h1>
-                <p className="mx-auto max-w-[700px] text-racing-green-200 md:text-xl animate-fade-in">
-                  At Fontaine Labs, we create beautiful, intuitive mobile applications that enhance your daily
-                  experience.
-                </p>
-              </div>
-              <div className="space-x-4">
-                <Button className="bg-primary hover:bg-racing-green-500 transition-colors">
-                  <Link href="#apps">
-                    Explore Our Apps <ArrowRight className="ml-2 h-4 w-4" />
+      <main className="mx-auto max-w-4xl px-4 py-10 space-y-12">
+        <section className="space-y-2">
+          <h1 className="text-xl">innovative mobile apps for modern life</h1>
+          <p>at fontaine labs, we create beautiful, intuitive mobile applications that enhance your daily experience.</p>
+        </section>
+
+        <section id="apps" className="space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-lg">apps</h2>
+            <p>download our apps</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {apps.map((app) => (
+              <div key={app.name} className="space-y-3">
+                <AppIcon app={app.icon} size="lg" />
+                <div className="space-y-1">
+                  <Link href={app.href} className="text-base">
+                    {app.name}
                   </Link>
-                </Button>
+                  <div className="text-sm">{app.tagline}</div>
+                  <p className="text-sm">{app.description}</p>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <Link href={app.supportHref}>support</Link>
+                  <Link href={app.privacyHref}>privacy policy</Link>
+                </div>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {app.badges.map((badge) => (
+                    <StoreBadge key={`${app.name}-${badge.store}`} store={badge.store} href={badge.href} />
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        <section id="apps" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">Our Apps</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {/* Aura Pro Card */}
-              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
-                {/* Make the entire card clickable with an overlay link */}
-                <Link href="/aura-pro" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Aura Pro details</span>
-                </Link>
-
-                <div className="h-48 bg-black flex items-center justify-center p-6">
-                  <div className="flex flex-col items-center">
-                    <AppIcon app="aura-pro" size="lg" className="mb-4" />
-                    <h3 className="text-3xl font-bold text-white">Aura Pro</h3>
-                  </div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <p className="text-card-foreground mb-4">
-                    Discover your unique aura signature with our advanced facial analysis technology. Reveal insights
-                    about your energy and spiritual alignment.
-                  </p>
-                  <div className="mt-auto space-y-3">
-                    <Link
-                      href="/support-aura-pro"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <Link
-                      href="/privacy-policy-aura-pro"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <div className="mt-4 flex justify-center relative z-20" onClick={(e) => e.stopPropagation()}>
-                      <StoreBadge store="app-store" href={auraPro.appStore} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* UniChance Card */}
-              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
-                {/* Make the entire card clickable with an overlay link */}
-                <Link href="/uni-chance" className="absolute inset-0 z-10">
-                  <span className="sr-only">View UniChance details</span>
-                </Link>
-
-                <div className="h-48 bg-black flex items-center justify-center p-6">
-                  <div className="flex flex-col items-center">
-                    <AppIcon app="uni-chance" size="lg" className="mb-4" />
-                    <h3 className="text-3xl font-bold text-white">UniChance</h3>
-                  </div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <p className="text-card-foreground mb-4">
-                    Navigate the college admissions process with confidence using our AI-powered platform. Calculate
-                    your chances of getting into top universities.
-                  </p>
-                  <div className="mt-auto space-y-3">
-                    <Link
-                      href="/support-uni-chance"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <Link
-                      href="/privacy-policy-uni-chance"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <div
-                      className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <StoreBadge store="app-store" href={uniChance.appStore} />
-                      <StoreBadge store="google-play" href={uniChance.googlePlay} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Link Card */}
-              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
-                {/* Make the entire card clickable with an overlay link */}
-                <Link href="/link" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Link details</span>
-                </Link>
-
-                <div className="h-48 bg-black flex items-center justify-center p-6">
-                  <div className="flex flex-col items-center">
-                    <AppIcon app="link" size="lg" className="mb-4" />
-                    <h3 className="text-3xl font-bold text-white">Link</h3>
-                  </div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <p className="text-card-foreground mb-4">
-                    A dating app that leverages your mutual friends to create meaningful connections. Find potential
-                    partners through trusted social networks.
-                  </p>
-                  <div className="mt-auto space-y-3">
-                    <Link
-                      href="/support-link"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <Link
-                      href="/privacy-policy-link"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <div
-                      className="mt-4 flex flex-wrap justify-center gap-2 relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <StoreBadge store="app-store" href={linkApp.appStore} />
-                      <StoreBadge store="google-play" href={linkApp.googlePlay} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Delta Card */}
-              <div className="flex flex-col rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 border border-border bg-card group relative">
-                {/* Make the entire card clickable with an overlay link */}
-                <Link href="/delta" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Delta details</span>
-                </Link>
-
-                <div className="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-6">
-                  <div className="flex flex-col items-center">
-                    <AppIcon app="aura-pro" size="lg" className="mb-4" />
-                    <h3 className="text-3xl font-bold text-white">Delta</h3>
-                  </div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <p className="text-card-foreground mb-4">
-                    Track your habits and build better routines with our intuitive habit tracking app. Visualize your progress and stay motivated.
-                  </p>
-                  <div className="mt-auto space-y-3">
-                    <Link
-                      href="/delta/support"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <MessageSquare className="h-4 w-4 mr-2 text-gray-600" /> Support
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <Link
-                      href="/delta/privacy"
-                      className="text-primary hover:text-racing-green-400 flex items-center relative z-20"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Shield className="h-4 w-4 mr-2 text-gray-600" /> Privacy Policy
-                      <ChevronRight className="ml-1 h-4 w-4 text-gray-600" />
-                    </Link>
-                    <div className="mt-4 flex justify-center relative z-20" onClick={(e) => e.stopPropagation()}>
-                      <StoreBadge store="app-store" href={deltaApp.appStore} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section id="info" className="space-y-2">
+          <h2 className="text-lg">info</h2>
+          <p>fontaine labs is an app studio helping users improve their lives with consumer mobile apps</p>
         </section>
 
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-black">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-racing-green-200">
-              About Fontaine Labs
-            </h2>
-            <p className="mx-auto max-w-[700px] text-racing-green-300 text-center mb-8">
-              Founded with a passion for creating exceptional mobile experiences, Fontaine Labs LLC is dedicated to
-              developing innovative applications that solve real problems. Our team of talented developers, designers,
-              and product specialists work together to craft apps that are both beautiful and functional.
-            </p>
-          </div>
+        <section id="about" className="space-y-2">
+          <h2 className="text-lg">about</h2>
+          <p>
+            founded with a passion for creating exceptional mobile experiences, fontaine labs llc is dedicated to
+            developing innovative applications that solve real problems. our team of talented developers, designers,
+            and product specialists work together to craft apps that are both beautiful and functional.
+          </p>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
-              Download Our Apps
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
-              <div className="flex flex-col items-center text-center relative group">
-                <Link href="/aura-pro" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Aura Pro details</span>
-                </Link>
-                <AppIcon app="aura-pro" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-2">Aura Pro</h3>
-                <p className="text-muted-foreground mb-4">Elite Aura Analysis</p>
-                <StoreBadge store="app-store" href={auraPro.appStore} className="relative z-20" />
-              </div>
-
-              <div className="flex flex-col items-center text-center relative group">
-                <Link href="/uni-chance" className="absolute inset-0 z-10">
-                  <span className="sr-only">View UniChance details</span>
-                </Link>
-                <AppIcon app="uni-chance" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-2">UniChance</h3>
-                <p className="text-muted-foreground mb-4">Admissions Analysis</p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  <StoreBadge store="app-store" href={uniChance.appStore} className="relative z-20" />
-                  <StoreBadge store="google-play" href={uniChance.googlePlay} className="relative z-20" />
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center text-center relative group">
-                <Link href="/link" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Link details</span>
-                </Link>
-                <AppIcon app="link" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-2">Link</h3>
-                <p className="text-muted-foreground mb-4">Match with Anyone</p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  <StoreBadge store="app-store" href={linkApp.appStore} className="relative z-20" />
-                  <StoreBadge store="google-play" href={linkApp.googlePlay} className="relative z-20" />
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center text-center relative group">
-                <Link href="/delta" className="absolute inset-0 z-10">
-                  <span className="sr-only">View Delta details</span>
-                </Link>
-                <AppIcon app="aura-pro" size="xl" className="mb-6 cursor-pointer" />
-                <h3 className="text-2xl font-bold mb-2">Delta</h3>
-                <p className="text-muted-foreground mb-4">Habit Tracking</p>
-                <StoreBadge store="app-store" href={deltaApp.appStore} className="relative z-20" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">Contact Us</h2>
-            <div className="mx-auto max-w-[500px] space-y-4">
-              <p className="text-center text-muted-foreground mb-6">
-                Have questions about our apps? We'd love to hear from you!
-              </p>
-              <Button className="w-full bg-primary hover:bg-racing-green-500 transition-colors">
-                <MessageSquare className="mr-2 h-4 w-4 text-gray-600" /> Contact Support
-              </Button>
-              <p className="text-center text-sm text-muted-foreground mt-4">
-                Email: founder@fontainelabs.com
-                <br />
-                Business Hours: Monday-Friday, 9am-5pm EST
-              </p>
-            </div>
-          </div>
+        <section id="contact" className="space-y-2">
+          <h2 className="text-lg">contact</h2>
+          <p>have questions about our apps? we'd love to hear from you!</p>
+          <p>email: founder@fontainelabs.com</p>
+          <p>business hours: monday-friday, 9am-5pm est</p>
         </section>
       </main>
       <SiteFooter />
