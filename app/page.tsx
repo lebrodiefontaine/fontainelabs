@@ -101,7 +101,7 @@ export default function Home() {
                   <div className="text-sm">{app.tagline}</div>
                   <p className="text-sm">{app.description}</p>
                 </div>
-                <div className="space-y-2 text-sm">
+                <div className="flex flex-wrap gap-4 text-sm">
                   <Link href={app.supportHref}>support</Link>
                   <Link href={app.privacyHref}>privacy policy</Link>
                 </div>
