@@ -12,7 +12,6 @@ export function AppStoreBadge({ href, className = "" }: AppStoreBadgeProps) {
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-block ${className}`}
-      onClick={(e) => e.stopPropagation()}
     >
       download on the app store
     </Link>

@@ -12,7 +12,6 @@ export function GooglePlayBadge({ href, className = "" }: GooglePlayBadgeProps) 
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-block ${className}`}
-      onClick={(e) => e.stopPropagation()}
     >
       get it on google play
     </Link>
